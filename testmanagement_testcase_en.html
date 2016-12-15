@@ -525,13 +525,286 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div class="sect3">
 <h4 id="_property">Property</h4>
-
+<div class="paragraph">
+<p>When Clicking on Button <span class="image"><img src="images/buttonmanageproperties.png" alt="buttonManageProperties"></span>, the Window "Manage Properties" will open.
+From there you can
+. either manage your TestCase properties
+. or see your inherited properties - coming from the step libraries of your use steps.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/windowmanageproperties.png" alt="windowManageProperties"></span></p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Field</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Description</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Property</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name of the property.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The way the property is going to be calculated.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Value</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Value of the property.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DataBase in which the property will "executeSql".</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Length</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">When calculating a list of values, defines the number of rows the property will return.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Row Limit</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">When returning a list of values, limits the number of rows the property will consider for random purposes.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Nature</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Defines the unique value that will be used in the execution. By default, STATIC has no rules defined : it will take the first result it finds.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Desription</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description of the property.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Countries</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Countries for which the property will be calculated (environment parameter).</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_variables">Variables</h4>
+<div class="paragraph">
+<p>You can use variables in the action and control&#8217;s values.
+These variable are define in cerberus and you can have access to them with the right syntax.</p>
+</div>
+<div class="paragraph">
+<p>A variable is defined between %</p>
+</div>
+<div class="paragraph">
+<p>The easiest way to feed an action with a property or an object, is to use the auto-completion :</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong><span class="red">Create</span></strong> your <strong>property</strong> or your <strong>application object <span class="red">in advance</span></strong></p>
+</li>
+<li>
+<p><strong><span class="red">Type</span></strong> "%"</p>
+</li>
+<li>
+<p><strong><span class="red">Select</span></strong> property or object</p>
+</li>
+<li>
+<p><strong><span class="red">Select</span></strong> property-name or object-name</p>
+</li>
+<li>
+<p>If it&#8217;s an object, <strong><span class="red">select</span></strong> its value / picture path / picture url</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/testcasevariables.png" alt="testCaseVariables"></span></p>
+</div>
+<div class="paragraph">
+<p>These syntax are available:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>%property.myproperty% : Get the property myproperty</p>
+</li>
+<li>
+<p>%object.myobject.value% : Get the application object myobject&#8217;s value</p>
+</li>
+<li>
+<p>%object.myobject.picturepath% : Get the application object myobject&#8217;s picture path</p>
+</li>
+<li>
+<p>%object.myobject.pictureurl% : Get the application object myobject&#8217;s picure url</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Below you will find usefull properties :</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Value</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Description</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_SYSTEM%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">System value</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_APPLI%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Application reference</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_APP_DOMAIN%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Domain of the Application</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_APP_VAR1%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">VAR1 of the application on the environment.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_APP_VAR2%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">VAR2 of the application on the environment.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_APP_VAR3%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">VAR3 of the application on the environment.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_APP_VAR4%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">VAR4 of the application on the environment.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_ENV%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Environment value</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_ENVGP%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Environment group code</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_COUNTRY%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Country code</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_TEST%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Test.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_TESTCASE%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TestCase</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_COUNTRYGP1%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Country group1 value</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_SSIP%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Selenium server IP</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_SSPORT%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Selenium server port</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_BROWSER%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Browser name of the current execution.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_TAG%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Execution tag</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_EXECUTIONID%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Execution ID</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_EXESTART%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Start date and time of the execution with format : 2016-12-31 21:24:53.008.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_EXESTORAGEURL%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Path where media are stored (based from the exeid).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_STEP.n.RETURNCODE%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Return Code of the step n. n being the execution sequence of the step (sort).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_TODAY-yyyy%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Year of today</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_TODAY-MM%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Month of today</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_TODAY-dd%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Day of today</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_TODAY-doy%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Day of today from the beginning of the year</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_TODAY-HH%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hour of today</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_TODAY-mm%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Minute of today</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_TODAY-ss%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Second of today</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_YESTERDAY-yyyy%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Year of yesterday</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_YESTERDAY-MM%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Month of yesterday</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_YESTERDAY-dd%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Day of yesterday</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_TODAY-doy%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Day of yesterday from the beginning of the year</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_YESTERDAY-HH%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hour of yesterday</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_YESTERDAY-mm%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Minute of yesterday</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_YESTERDAY-ss%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Second of yesterday</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_ELAPSED-EXESTART%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Number of milisecond since the start of the execution.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_ELAPSED-STEPSTART%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Number of milisecond since the start of the execution of the current step.</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-10-10 15:25:44 +02:00
+Last updated 2016-12-14 21:21:33 +01:00
 </div>
 </div>
 </body>

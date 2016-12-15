@@ -470,7 +470,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#_librairie">Librairie</a>
 <ul class="sectlevel1">
-<li><a href="#_librairie_de_données">9. Librairie de données</a></li>
+<li><a href="#_librairie_de_données">9. Librairie de données</a>
+<ul class="sectlevel2">
+<li><a href="#_créer_une_donnée">9.1. Créer une donnée</a></li>
+<li><a href="#_configurations_des_données">9.2. Configurations des données</a></li>
+</ul>
+</li>
 <li><a href="#_librairie_de_soap">10. Librairie de SOAP</a></li>
 <li><a href="#_librairie_de_sql">11. Librairie de SQL</a></li>
 </ul>
@@ -488,82 +493,95 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_create_application">13.2. Create application</a></li>
 </ul>
 </li>
-<li><a href="#_type_de_déploiement">14. Type de déploiement</a>
+<li><a href="#_objet_d_application">14. Objet d&#8217;Application</a>
 <ul class="sectlevel2">
-<li><a href="#_deploy_type_attributes">14.1. Deploy Type attributes</a></li>
-<li><a href="#_create_deploy_type">14.2. Create deploy type</a></li>
+<li><a href="#_attibuts_des_objects_d_application">14.1. Attibuts des objects d&#8217;application</a></li>
 </ul>
 </li>
-<li><a href="#_chaine">15. Chaine</a>
+<li><a href="#_type_de_déploiement">15. Type de déploiement</a>
 <ul class="sectlevel2">
-<li><a href="#_batch_invariant_attributes">15.1. Batch invariant attributes</a></li>
-<li><a href="#_create_deploy_type_2">15.2. Create deploy type</a></li>
+<li><a href="#_deploy_type_attributes">15.1. Deploy Type attributes</a></li>
+<li><a href="#_create_deploy_type">15.2. Create deploy type</a></li>
 </ul>
 </li>
-<li><a href="#_projet">16. Projet</a>
+<li><a href="#_chaine">16. Chaine</a>
 <ul class="sectlevel2">
-<li><a href="#_project_attributes">16.1. Project attributes</a></li>
-<li><a href="#_create_deploy_type_3">16.2. Create deploy type</a></li>
+<li><a href="#_batch_invariant_attributes">16.1. Batch invariant attributes</a></li>
+<li><a href="#_create_deploy_type_2">16.2. Create deploy type</a></li>
 </ul>
 </li>
-<li><a href="#_contenu_des_builds">17. Contenu des builds</a>
+<li><a href="#_projet">17. Projet</a>
 <ul class="sectlevel2">
-<li><a href="#_build_content_attributes">17.1. Build content attributes</a></li>
-<li><a href="#_create_build_content">17.2. Create build content</a></li>
+<li><a href="#_project_attributes">17.1. Project attributes</a></li>
+<li><a href="#_create_deploy_type_3">17.2. Create deploy type</a></li>
 </ul>
 </li>
-<li><a href="#_build_revision">18. Build / Revision</a>
+<li><a href="#_contenu_des_builds">18. Contenu des builds</a>
 <ul class="sectlevel2">
-<li><a href="#_build_revision_invariant_attributes">18.1. Build Revision invariant attributes</a></li>
-<li><a href="#_create_build_revision_invariant">18.2. Create build/revision invariant</a></li>
+<li><a href="#_build_content_attributes">18.1. Build content attributes</a></li>
+<li><a href="#_create_build_content">18.2. Create build content</a></li>
+</ul>
+</li>
+<li><a href="#_build_revision">19. Build / Revision</a>
+<ul class="sectlevel2">
+<li><a href="#_build_revision_invariant_attributes">19.1. Build Revision invariant attributes</a></li>
+<li><a href="#_create_build_revision_invariant">19.2. Create build/revision invariant</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li><a href="#_administration">Administration</a>
 <ul class="sectlevel1">
-<li><a href="#_gestion_des_utilisateurs">19. Gestion des utilisateurs</a>
+<li><a href="#_gestion_des_utilisateurs">20. Gestion des utilisateurs</a>
 <ul class="sectlevel2">
-<li><a href="#_user_creation">19.1. User creation</a></li>
-<li><a href="#_user_rights">19.2. User rights</a></li>
-<li><a href="#_access_by_system">19.3. Access by system</a></li>
+<li><a href="#_user_creation">20.1. User creation</a></li>
+<li><a href="#_user_rights">20.2. User rights</a></li>
+<li><a href="#_access_by_system">20.3. Access by system</a></li>
 </ul>
 </li>
-<li><a href="#_journal_de_modifications">20. Journal de modifications</a></li>
-<li><a href="#_maintenance_de_base_de_données">21. Maintenance de base de données</a></li>
-<li><a href="#_paramètres">22. Paramètres</a>
+<li><a href="#_journal_de_modifications">21. Journal de modifications</a></li>
+<li><a href="#_maintenance_de_base_de_données">22. Maintenance de base de données</a></li>
+<li><a href="#_paramètres">23. Paramètres</a>
 <ul class="sectlevel2">
-<li><a href="#_parameter_attributes">22.1. Parameter attributes</a></li>
+<li><a href="#_parameter_attributes">23.1. Parameter attributes</a></li>
 </ul>
 </li>
-<li><a href="#_invariants">23. Invariants</a>
+<li><a href="#_invariants">24. Invariants</a>
 <ul class="sectlevel2">
-<li><a href="#_invariant_attributes">23.1. Invariant attributes</a></li>
-<li><a href="#_create_public_invariant">23.2. Create public invariant</a></li>
-<li><a href="#_invariant_list">23.3. Invariant List</a></li>
+<li><a href="#_invariant_attributes">24.1. Invariant attributes</a></li>
+<li><a href="#_create_public_invariant">24.2. Create public invariant</a></li>
+<li><a href="#_invariant_list">24.3. Invariant List</a></li>
 </ul>
 </li>
-<li><a href="#_cerberus_monitoring">24. Cerberus Monitoring</a></li>
+<li><a href="#_cerberus_monitoring">25. Cerberus Monitoring</a></li>
 </ul>
 </li>
 <li><a href="#_installation">Installation</a>
 <ul class="sectlevel1">
-<li><a href="#_architecture_technique">25. Architecture technique</a></li>
-<li><a href="#_guide_d_installation">26. Guide d&#8217;installation</a>
+<li><a href="#_installation_de_cerberus">26. Installation de Cerberus</a>
 <ul class="sectlevel2">
-<li><a href="#_manual_installation">26.1. Manual installation</a></li>
-<li><a href="#_docker">26.2. Docker</a></li>
+<li><a href="#_architecture_technique">26.1. Architecture technique</a></li>
+<li><a href="#_guide_d_installation">26.2. Guide d&#8217;installation</a></li>
+<li><a href="#_manual_installation">26.3. Manual installation</a></li>
+<li><a href="#_docker">26.4. Docker</a></li>
+<li><a href="#_initialisation_de_la_base_de_données">26.5. Initialisation de la base de données</a></li>
+<li><a href="#_configuration_de_cerberus">26.6. Configuration de Cerberus</a></li>
 </ul>
 </li>
-<li><a href="#_initialisation_de_la_base_de_données">27. Initialisation de la base de données</a></li>
-<li><a href="#_configuration_de_cerberus">28. Configuration de Cerberus</a></li>
+<li><a href="#_outils_externes">27. Outils externes</a>
+<ul class="sectlevel2">
+<li><a href="#_selenium">27.1. Selenium</a></li>
+<li><a href="#_appium">27.2. Appium</a></li>
+<li><a href="#_sikuli">27.3. Sikuli</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a href="#_maintenance">Maintenance</a>
 <ul class="sectlevel1">
-<li><a href="#_performance">29. Performance</a></li>
-<li><a href="#_nettoyage_de_la_bdd">30. Nettoyage de la BDD</a></li>
-<li><a href="#_mise_à_jour_de_cerberus">31. Mise à jour de Cerberus</a></li>
+<li><a href="#_performance">28. Performance</a></li>
+<li><a href="#_nettoyage_de_la_bdd">29. Nettoyage de la BDD</a></li>
+<li><a href="#_mise_à_jour_de_cerberus">30. Mise à jour de Cerberus</a></li>
 </ul>
 </li>
 </ul>
@@ -597,7 +615,7 @@ Nous vous encourageons à nous soumettre des "issues" et de prendre part aux dis
 <div class="openblock partintro">
 <div class="content">
 <div class="paragraph">
-<p>In this section, you will find information on Cerberus.</p>
+<p>Cette section décrit comment installer Cerberus et ses outils externes associés.</p>
 </div>
 <div class="paragraph">
 <p><a href="https://github.com/vertigo17/Cerberus/edit/master/source/src/main/resources/documentation/include/fr/introduction_introduction_fr.adoc" target="_blank"><span class="image"><img src="images/edit-doc.png" alt="FR" width="20" height="20"></span></a> <em>Cette partie vous semble incomplète ou incorrecte? Soyez libre de nous soumettre votre version.</em></p>
@@ -924,6 +942,36 @@ How it is organized, How the tables are Customizable&#8230;&#8203;etc.</p>
 </div>
 <div class="sect3">
 <h4 id="_property">5.5.3. Property</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_variables">5.5.4. Variables</h4>
+<div class="paragraph">
+<p>You can use variables in the action and control&#8217;s values.
+These variable are define in cerberus and you can have access to them with the right syntax.</p>
+</div>
+<div class="paragraph">
+<p>A variable is defined between %</p>
+</div>
+<div class="paragraph">
+<p>These syntax are available:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>%property.myproperty% : Get the property myproperty</p>
+</li>
+<li>
+<p>%object.myobject.value% : Get the application object myobject&#8217;s value</p>
+</li>
+<li>
+<p>%object.myobject.picturepath% : Get the application object myobject&#8217;s picture path</p>
+</li>
+<li>
+<p>%object.myobject.pictureurl% : Get the application object myobject&#8217;s picure url</p>
+</li>
+</ol>
+</div>
 <div class="paragraph">
 <p><a href="https://github.com/vertigo17/Cerberus/edit/master/source/src/main/resources/documentation/include/fr/testmanagement_testcase_fr.adoc" target="_blank"><span class="image"><img src="images/edit-doc.png" alt="FR" width="20" height="20"></span></a> <em>Cette partie vous semble incomplète ou incorrecte? Soyez libre de nous soumettre votre version.</em></p>
 </div>
@@ -1144,10 +1192,150 @@ How it is organized, How the tables are Customizable&#8230;&#8203;etc.</p>
 <h2 id="_librairie_de_données">9. Librairie de données</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>In this section, you will find information on data library in Cerberus.</p>
+<p>Dans cette section, vous retrouverez toutes les informations sur la gestion des données via la datalibrary.</p>
+</div>
+<div class="sect2">
+<h3 id="_créer_une_donnée">9.1. Créer une donnée</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Cliquer sur <strong><span class="red">Data &#8594; Data Library</span></strong>. <span class="image" style="float: right"><img src="images/testdatapage.png" alt="testdatapage" width="300" height="300"></span></p>
+</li>
+<li>
+<p>Cliquer sur <strong><span class="red">Create New Entry</span></strong> button.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Indiquer le <strong><span class="red">Nom</span></strong></p>
+</li>
+<li>
+<p>Selectionner le <strong><span class="red">Type</span></strong> de la donnée.</p>
+</li>
+<li>
+<p>Selectionner un <strong><span class="green">Système</span></strong>, un <strong><span class="green">Environnement</span></strong>, un <strong><span class="green">Pays</span></strong> (champs non obligatoires).</p>
+</li>
+<li>
+<p>Remplir les champs liés à votre <strong><span class="red">configuration</span></strong>.</p>
+</li>
+<li>
+<p>Remplir une <strong><span class="green">Description</span></strong>.</p>
+</li>
+<li>
+<p>Aller dans l&#8217;onglet <strong><span class="red">SubData</span></strong></p>
+</li>
+<li>
+<p>Remplir les informations de vos subdatas liées à votre configuration. Se référer à la section Configurations des données pour plus d&#8217;informations.</p>
+</li>
+<li>
+<p>Cliquer sur <strong><span class="red">Ajouter</span></strong>.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
 </div>
 <div class="paragraph">
+<p>La première subdata ne requiert pas de nom. %my_data% retournera la valeur de la subdata 1 et %my_data(sub-data2)% retournera la valeur de la subdata 2.</p>
+</div>
+<div class="paragraph">
+<p>Si aucun environnement, système ou pays n&#8217;est sélectionné, la donnée sera disponible sur tous les environnements, systèmes et pays.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_configurations_des_données">9.2. Configurations des données</h3>
+<div class="sect3">
+<h4 id="_configuration_interne">9.2.1. configuration Interne</h4>
+<div class="paragraph">
+<p>Pas de configuration spécifique, seule une valeur statique est requise dans l&#8217;onglet subdata.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/testdatacreatenewsubdata.PNG" alt="Logo"></span></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_configuration_soap">9.2.2. configuration SOAP</h4>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Champ</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Description</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Base de données</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Base de données ou le Database where the Service Path will be requested. (non obligatoire)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Service Path</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Localisation du service. Exemple: <a href="http://mydomain/mywebservicelocationmywebservicelocation" class="bare">http://mydomain/mywebservicelocationmywebservicelocation</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Opération</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Opérations invoquée par l&#8217;appel SOAP.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enveloppe</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Message qui sera envoyé par la requête SOAP.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_configuration_sql">9.2.3. configuration SQL</h4>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Champ</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Description</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Base de données</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Base de données où la requête doit être executer .</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Requête</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Requête à executer.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_csv_configuration">9.2.4. CSV configuration</h4>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Champ</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Description</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Base de données</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TBD</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CSV URL</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CSV URL indique l&#8217;URL ou le CSV est accessible.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Séparateur</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Séparateur utilisé par le CSV.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
 <p><a href="https://github.com/vertigo17/Cerberus/edit/master/source/src/main/resources/documentation/include/fr/library_datalibrary_fr.adoc" target="_blank"><span class="image"><img src="images/edit-doc.png" alt="FR" width="20" height="20"></span></a> <em>Cette partie vous semble incomplète ou incorrecte? Soyez libre de nous soumettre votre version.</em></p>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -1405,7 +1593,52 @@ How it is organized, How the tables are Customizable&#8230;&#8203;etc.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_type_de_déploiement">14. Type de déploiement</h2>
+<h2 id="_objet_d_application">14. Objet d&#8217;Application</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Dans cette section, vous allez trouver des informations à propos des objets d&#8217;application</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/applicationobject.png" alt="ApplicationPage"></span></p>
+</div>
+<div class="sect2">
+<h3 id="_attibuts_des_objects_d_application">14.1. Attibuts des objects d&#8217;application</h3>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Champ</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Description</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Application</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">L&#8217;application liée à l&#8217;objet</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Object</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Le nom de l&#8217;objet</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Value</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">La valeur de l&#8217;objet</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">File Name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">L&#8217;Image chargée qui représente l&#8217;objet</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><a href="https://github.com/vertigo17/Cerberus/edit/master/source/src/main/resources/documentation/include/fr/integration_applicationobject_fr.adoc" target="_blank"><span class="image"><img src="images/edit-doc.png" alt="FR" width="20" height="20"></span></a> <em>Cette partie vous semble incomplète ou incorrecte? Soyez libre de nous soumettre votre version.</em></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_type_de_déploiement">15. Type de déploiement</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>In this section, you will find information on deploy type.</p>
@@ -1414,7 +1647,7 @@ How it is organized, How the tables are Customizable&#8230;&#8203;etc.</p>
 <p><span class="image"><img src="images/deploytypepage.png" alt="Logo"></span></p>
 </div>
 <div class="sect2">
-<h3 id="_deploy_type_attributes">14.1. Deploy Type attributes</h3>
+<h3 id="_deploy_type_attributes">15.1. Deploy Type attributes</h3>
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
 <col style="width: 50%;">
@@ -1437,7 +1670,7 @@ How it is organized, How the tables are Customizable&#8230;&#8203;etc.</p>
 </table>
 </div>
 <div class="sect2">
-<h3 id="_create_deploy_type">14.2. Create deploy type</h3>
+<h3 id="_create_deploy_type">15.2. Create deploy type</h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -1468,7 +1701,7 @@ How it is organized, How the tables are Customizable&#8230;&#8203;etc.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_chaine">15. Chaine</h2>
+<h2 id="_chaine">16. Chaine</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>In this section, you will find information on batch</p>
@@ -1477,7 +1710,7 @@ How it is organized, How the tables are Customizable&#8230;&#8203;etc.</p>
 <p><span class="image"><img src="images/batchpage.png" alt="BatchPage"></span></p>
 </div>
 <div class="sect2">
-<h3 id="_batch_invariant_attributes">15.1. Batch invariant attributes</h3>
+<h3 id="_batch_invariant_attributes">16.1. Batch invariant attributes</h3>
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
 <col style="width: 50%;">
@@ -1504,7 +1737,7 @@ How it is organized, How the tables are Customizable&#8230;&#8203;etc.</p>
 </table>
 </div>
 <div class="sect2">
-<h3 id="_create_deploy_type_2">15.2. Create deploy type</h3>
+<h3 id="_create_deploy_type_2">16.2. Create deploy type</h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -1538,7 +1771,7 @@ How it is organized, How the tables are Customizable&#8230;&#8203;etc.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_projet">16. Projet</h2>
+<h2 id="_projet">17. Projet</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>In this section, you will find information on project in Cerberus</p>
@@ -1547,7 +1780,7 @@ How it is organized, How the tables are Customizable&#8230;&#8203;etc.</p>
 <p><span class="image"><img src="images/projectpage.png" alt="ProjectPage"></span></p>
 </div>
 <div class="sect2">
-<h3 id="_project_attributes">16.1. Project attributes</h3>
+<h3 id="_project_attributes">17.1. Project attributes</h3>
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
 <col style="width: 50%;">
@@ -1578,7 +1811,7 @@ How it is organized, How the tables are Customizable&#8230;&#8203;etc.</p>
 </table>
 </div>
 <div class="sect2">
-<h3 id="_create_deploy_type_3">16.2. Create deploy type</h3>
+<h3 id="_create_deploy_type_3">17.2. Create deploy type</h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -1612,7 +1845,7 @@ How it is organized, How the tables are Customizable&#8230;&#8203;etc.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_contenu_des_builds">17. Contenu des builds</h2>
+<h2 id="_contenu_des_builds">18. Contenu des builds</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>In this section, you will find information on build content in Cerberus</p>
@@ -1621,7 +1854,7 @@ How it is organized, How the tables are Customizable&#8230;&#8203;etc.</p>
 <p><span class="image"><img src="images/buildcontentpage.png" alt="BuildContentPage"></span></p>
 </div>
 <div class="sect2">
-<h3 id="_build_content_attributes">17.1. Build content attributes</h3>
+<h3 id="_build_content_attributes">18.1. Build content attributes</h3>
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
 <col style="width: 50%;">
@@ -1640,9 +1873,9 @@ How it is organized, How the tables are Customizable&#8230;&#8203;etc.</p>
 </table>
 </div>
 <div class="sect2">
-<h3 id="_create_build_content">17.2. Create build content</h3>
+<h3 id="_create_build_content">18.2. Create build content</h3>
 <div class="sect3">
-<h4 id="_manually">17.2.1. Manually</h4>
+<h4 id="_manually">18.2.1. Manually</h4>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -1668,7 +1901,7 @@ How it is organized, How the tables are Customizable&#8230;&#8203;etc.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_automatically">17.2.2. Automatically</h4>
+<h4 id="_automatically">18.2.2. Automatically</h4>
 <div class="paragraph">
 <p>To describe.</p>
 </div>
@@ -1680,7 +1913,7 @@ How it is organized, How the tables are Customizable&#8230;&#8203;etc.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_build_revision">18. Build / Revision</h2>
+<h2 id="_build_revision">19. Build / Revision</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>In this section, you will find information on build revision invariants</p>
@@ -1689,7 +1922,7 @@ How it is organized, How the tables are Customizable&#8230;&#8203;etc.</p>
 <p><span class="image"><img src="images/buildrevisionpage.png" alt="BuildRevisionPage"></span></p>
 </div>
 <div class="sect2">
-<h3 id="_build_revision_invariant_attributes">18.1. Build Revision invariant attributes</h3>
+<h3 id="_build_revision_invariant_attributes">19.1. Build Revision invariant attributes</h3>
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
 <col style="width: 50%;">
@@ -1720,7 +1953,7 @@ How it is organized, How the tables are Customizable&#8230;&#8203;etc.</p>
 </table>
 </div>
 <div class="sect2">
-<h3 id="_create_build_revision_invariant">18.2. Create build/revision invariant</h3>
+<h3 id="_create_build_revision_invariant">19.2. Create build/revision invariant</h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -1769,21 +2002,21 @@ How it is organized, How the tables are Customizable&#8230;&#8203;etc.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_gestion_des_utilisateurs">19. Gestion des utilisateurs</h2>
+<h2 id="_gestion_des_utilisateurs">20. Gestion des utilisateurs</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>In this section, you will find information about Cerberus user management.</p>
 </div>
 <div class="sect2">
-<h3 id="_user_creation">19.1. User creation</h3>
+<h3 id="_user_creation">20.1. User creation</h3>
 
 </div>
 <div class="sect2">
-<h3 id="_user_rights">19.2. User rights</h3>
+<h3 id="_user_rights">20.2. User rights</h3>
 
 </div>
 <div class="sect2">
-<h3 id="_access_by_system">19.3. Access by system</h3>
+<h3 id="_access_by_system">20.3. Access by system</h3>
 <div class="paragraph">
 <p><a href="https://github.com/vertigo17/Cerberus/edit/master/source/src/main/resources/documentation/include/fr/administration_usermanagement_fr.adoc" target="_blank"><span class="image"><img src="images/edit-doc.png" alt="FR" width="20" height="20"></span></a> <em>Cette partie vous semble incomplète ou incorrecte? Soyez libre de nous soumettre votre version.</em></p>
 </div>
@@ -1791,7 +2024,7 @@ How it is organized, How the tables are Customizable&#8230;&#8203;etc.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_journal_de_modifications">20. Journal de modifications</h2>
+<h2 id="_journal_de_modifications">21. Journal de modifications</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Most of the change triggered in Cerberus are recorded in a table.</p>
@@ -1818,7 +2051,7 @@ To guaranty performance of Cerbeurs over the time, please refer to <a href="#Cle
 </div>
 </div>
 <div class="sect1">
-<h2 id="_maintenance_de_base_de_données">21. Maintenance de base de données</h2>
+<h2 id="_maintenance_de_base_de_données">22. Maintenance de base de données</h2>
 <div class="sectionbody">
 <div class="admonitionblock note">
 <table>
@@ -1870,7 +2103,7 @@ Application and Database Must be in the same version.
 </div>
 </div>
 <div class="sect1">
-<h2 id="_paramètres">22. Paramètres</h2>
+<h2 id="_paramètres">23. Paramètres</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>In this section, you will find information about Cerberus parameters.</p>
@@ -1892,7 +2125,7 @@ as described in the <a href="#Cerberus configuration">[Cerberus configuration]</
 <p><span class="image"><img src="images/parameter.png" alt="Logo"></span></p>
 </div>
 <div class="sect2">
-<h3 id="_parameter_attributes">22.1. Parameter attributes</h3>
+<h3 id="_parameter_attributes">23.1. Parameter attributes</h3>
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
 <col style="width: 50%;">
@@ -1928,7 +2161,7 @@ as described in the <a href="#Cerberus configuration">[Cerberus configuration]</
 </div>
 </div>
 <div class="sect1">
-<h2 id="_invariants">23. Invariants</h2>
+<h2 id="_invariants">24. Invariants</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>In this section, you will find information on invariant private and public.</p>
@@ -1949,7 +2182,7 @@ Private invariants are not editable because used by the Cerberus engine or the u
 <p><span class="image"><img src="images/invariantpage.png" alt="Logo"></span></p>
 </div>
 <div class="sect2">
-<h3 id="_invariant_attributes">23.1. Invariant attributes</h3>
+<h3 id="_invariant_attributes">24.1. Invariant attributes</h3>
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
 <col style="width: 50%;">
@@ -1996,7 +2229,7 @@ Private invariants are not editable because used by the Cerberus engine or the u
 </table>
 </div>
 <div class="sect2">
-<h3 id="_create_public_invariant">23.2. Create public invariant</h3>
+<h3 id="_create_public_invariant">24.2. Create public invariant</h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -2040,17 +2273,17 @@ Private invariants are not editable because used by the Cerberus engine or the u
 </div>
 </div>
 <div class="sect2">
-<h3 id="_invariant_list">23.3. Invariant List</h3>
+<h3 id="_invariant_list">24.3. Invariant List</h3>
 <div class="sect3">
-<h4 id="_country">23.3.1. Country</h4>
+<h4 id="_country">24.3.1. Country</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_environment">23.3.2. Environment</h4>
+<h4 id="_environment">24.3.2. Environment</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_system">23.3.3. System</h4>
+<h4 id="_system">24.3.3. System</h4>
 <div class="paragraph">
 <p><a href="https://github.com/vertigo17/Cerberus/edit/master/source/src/main/resources/documentation/include/fr/administration_invariants_fr.adoc" target="_blank"><span class="image"><img src="images/edit-doc.png" alt="FR" width="20" height="20"></span></a> <em>Cette partie vous semble incomplète ou incorrecte? Soyez libre de nous soumettre votre version.</em></p>
 </div>
@@ -2059,7 +2292,7 @@ Private invariants are not editable because used by the Cerberus engine or the u
 </div>
 </div>
 <div class="sect1">
-<h2 id="_cerberus_monitoring">24. Cerberus Monitoring</h2>
+<h2 id="_cerberus_monitoring">25. Cerberus Monitoring</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>In this section, you will find information on cerberus monitoring page.</p>
@@ -2088,8 +2321,10 @@ Private invariants are not editable because used by the Cerberus engine or the u
 </div>
 </div>
 <div class="sect1">
-<h2 id="_architecture_technique">25. Architecture technique</h2>
+<h2 id="_installation_de_cerberus">26. Installation de Cerberus</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="_architecture_technique">26.1. Architecture technique</h3>
 <div class="paragraph">
 <p><span class="image"><img src="images/architecture.png" alt="Logo"></span></p>
 </div>
@@ -2097,25 +2332,22 @@ Private invariants are not editable because used by the Cerberus engine or the u
 <p><a href="https://github.com/vertigo17/Cerberus/edit/master/source/src/main/resources/documentation/include/fr/installation_technicalarchitecture_fr.adoc" target="_blank"><span class="image"><img src="images/edit-doc.png" alt="FR" width="20" height="20"></span></a> <em>Cette partie vous semble incomplète ou incorrecte? Soyez libre de nous soumettre votre version.</em></p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_guide_d_installation">26. Guide d&#8217;installation</h2>
-<div class="sectionbody">
 <div class="sect2">
-<h3 id="_manual_installation">26.1. Manual installation</h3>
+<h3 id="_guide_d_installation">26.2. Guide d&#8217;installation</h3>
 
 </div>
 <div class="sect2">
-<h3 id="_docker">26.2. Docker</h3>
+<h3 id="_manual_installation">26.3. Manual installation</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_docker">26.4. Docker</h3>
 <div class="paragraph">
 <p><a href="https://github.com/vertigo17/Cerberus/edit/master/source/src/main/resources/documentation/include/fr/installation_installationguide_fr.adoc" target="_blank"><span class="image"><img src="images/edit-doc.png" alt="FR" width="20" height="20"></span></a> <em>Cette partie vous semble incomplète ou incorrecte? Soyez libre de nous soumettre votre version.</em></p>
 </div>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_initialisation_de_la_base_de_données">27. Initialisation de la base de données</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_initialisation_de_la_base_de_données">26.5. Initialisation de la base de données</h3>
 <div class="paragraph">
 <p>Database init instruction</p>
 </div>
@@ -2123,15 +2355,506 @@ Private invariants are not editable because used by the Cerberus engine or the u
 <p><a href="https://github.com/vertigo17/Cerberus/edit/master/source/src/main/resources/documentation/include/fr/installation_databaseinit_fr.adoc" target="_blank"><span class="image"><img src="images/edit-doc.png" alt="FR" width="20" height="20"></span></a> <em>Cette partie vous semble incomplète ou incorrecte? Soyez libre de nous soumettre votre version.</em></p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_configuration_de_cerberus">28. Configuration de Cerberus</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_configuration_de_cerberus">26.6. Configuration de Cerberus</h3>
 <div class="paragraph">
 <p>Installation introduction</p>
 </div>
 <div class="paragraph">
 <p><a href="https://github.com/vertigo17/Cerberus/edit/master/source/src/main/resources/documentation/include/fr/installation_configuration_fr.adoc" target="_blank"><span class="image"><img src="images/edit-doc.png" alt="FR" width="20" height="20"></span></a> <em>Cette partie vous semble incomplète ou incorrecte? Soyez libre de nous soumettre votre version.</em></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_outils_externes">27. Outils externes</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>L&#8217;exécution d&#8217;un test dépend du type d&#8217;application sous-jacent. En effet, pour chaque type d&#8217;application, il existe un moteur spécifique permettant l&#8217;exécution des tests. Par exemple, le test d&#8217;application Web implique l&#8217;utilisation du moteur <a href="http://www.seleniumhq.org/">Selenium</a>.</p>
+</div>
+<div class="paragraph">
+<p>Le but de Cerberus est de réunir l&#8217;ensemble de ces moteurs, en définissant une manière commune pour l&#8217;ecriture et l&#8217;exécution des tests, quelque soit le type de l&#8217;application sous-jacente.</p>
+</div>
+<div class="paragraph">
+<p>Si-après la liste des types d&#8217;applications compatibles et leur outil externe associé:</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 1. Types d&#8217;applications et leur outil externe associé</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Types d&#8217;application</th>
+<th class="tableblock halign-left valign-top">Outil externe associé</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Web</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Selenium</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mobile (Android, Iphone)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Appium</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Client lourd</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sikuli</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Services Web</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Implémentation interne Cerberus</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Les sections suivantes décrives l&#8217;installation et la configuration de chacun de ces outils externes.</p>
+</div>
+<div class="sect2">
+<h3 id="_selenium">27.1. Selenium</h3>
+<div class="paragraph">
+<p>Unresolved directive in documentation_fr.adoc - include::include/fr/installation_externaltools_selenium_fr.adoc[]</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_appium">27.2. Appium</h3>
+<div class="paragraph">
+<p><a href="http://appium.io/">Appium</a> est un outil libre d&#8217;automatisation d&#8217;applications native, hybride ou Web, utilisant le protocole <a href="https://www.w3.org/TR/webdriver/">WebDriver</a> pour le rendre compatible iOS, Android et Windows.</p>
+</div>
+<div class="paragraph">
+<p>Cette procédure couvre l&#8217;installation et la configuraiton d'<strong>Appium v1.6.2+</strong>.</p>
+</div>
+<div class="sect3">
+<h4 id="_sommaire">27.2.1. Sommaire</h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="#installation_externaltools_appium_en_appium_server_installation">Installation du serveur Appium</a></p>
+</li>
+<li>
+<p><a href="#installation_externaltools_appium_en_client_use">Utilisations clientes</a></p>
+</li>
+<li>
+<p><a href="#installation_externaltools_appium_en_useful_links">Liens utiles</a></p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="installation_externaltools_appium_en_appium_server_installation">27.2.2. Installation du serveur Appium</h4>
+<div class="sect4">
+<h5 id="_android">Android</h5>
+<div class="paragraph">
+<p>Installer le <em>Android SDK</em> v.1.7+. Se référer à la documentation officielle <a href="https://developer.android.com/studio/install.html">ici</a> et <a href="https://developer.android.com/studio/intro/update.html">ici</a> pour plus d&#8217;informations.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_ios">IOS</h5>
+<div class="sect5">
+<h6 id="_installation_2">Installation</h6>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Installer <em>Xcode</em> 8.1+</p>
+</li>
+<li>
+<p>Installer les <em>Apple Developer Tools</em> via cette <a href="http://railsapps.github.io/xcode-command-line-tools.html">documentation externe (en)</a></p>
+</li>
+<li>
+<p>Suivre la procédure décrite au sein de cette <a href="https://hasaanali.wordpress.com/2016/12/01/install-appium-v1-6-from-terminal-setup-for-ios/">documentation externe (en)</a> et y ajouter les commandes et corrections suivantes:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p><a href="https://github.com/Carthage/Carthage\"><em>Carthage</em></a> ne peut pas être installé via <em>npm</em> mais via <em>brew</em>. Ainsi, pour installer <em>Carthage</em>, executer:</p>
+<div class="listingblock">
+<div class="content">
+<pre>brew install carthage</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Executer les commandes supplémentaires suivantes:</p>
+<div class="listingblock">
+<div class="content">
+<pre>npm install -g ios-deploy --unsafe-perm=true
+npm install -g deviceconsole
+brew uninstall ideviceinstaller
+brew uninstall libimobiledevice
+brew install --HEAD libimobiledevice
+brew unlink libimobiledevice &amp;&amp; brew link libimobiledevice
+brew install ideviceinstaller
+brew unlink ideviceinstaller &amp;&amp; brew link ideviceinstaller</pre>
+</div>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Caution</div>
+</td>
+<td class="content">
+<div class="title">A propos de la version actuelle d&#8217;Appium via <em>npm</em></div>
+<div class="paragraph">
+<p>A l&#8217;heure de l&#8217;écriture de ce document, la version installée du serveur Appium via <em>npm</em> (1.6.2) ne fonctionnait pas correctement avec Cerberus. Seule la version de développment, à savoir 1.6.3-SNAPSHOT, permettait de lancer correctement des tests mobiles.
+Ci-dessous la liste des commandes à exécuter afin d&#8217;intaller la version de développement du serveur d&#8217;Appium (extrait de la <a href="https://github.com/appium/appium/blob/master/docs/en/contributing-to-appium/appium-from-source.md">documentation officielle (en)</a>):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>git clone https://github.com/appium/appium.git
+cd appium
+npm install -g mocha
+npm install -g gulp
+npm install -g gulp-cli
+npm install
+gulp transpile</pre>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect5">
+<h6 id="installation_externaltools_appium_en_appium_server_installation_application_sign_configuration">Signature des applications</h6>
+<div class="paragraph">
+<p>La dernière version d&#8217;Appium utilise <a href="https://github.com/appium/appium-xcuitest-driver">appium-xcuitest-driver</a>, lui même dépendant de <a href="https://github.com/facebook/WebDriverAgent">Web Driver Agent</a> qui a besoin d&#8217;être déployé sur le mobile a tester. Ainsi, le poste hébergeant le serveur Appium a besoin d&#8217;être configuré pour être autoriser à déployer une applciation sur le mobile à tester.</p>
+</div>
+<div class="paragraph">
+<p>Le poste hébergeant le serveur Appium doit :</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>avoir le compte Apple associé enregistré auprès d&#8217;une <a href="https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/ManagingYourTeam/ManagingYourTeam.html">Equie de Développement Apple</a></p>
+</li>
+<li>
+<p>avoir téléchargé le certificat <em>iOS Development</em> au niveau des <em>Signing identities</em> Xcode associées à l&#8217;Equipe de Développement Apple</p>
+</li>
+<li>
+<p>avoir téléchargé le profile de provisionnement associé à l&#8217;Equipe de Développement Apple qui autorise :</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>au moins</strong> l&#8217;appliation <em>Web Driver Agent</em> (identifiée par le <em>bundle id</em> <code>com.facebook.WebDriverAgentLib</code>)</p>
+</li>
+<li>
+<p>le mobile de test à installer application <em>Web Driver Agent</em></p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Une fois ces prérequis réalisé, créer un fichier <em>appium.xcconfig</em> et y renseigner (où <code>&lt;Team ID&gt;</code> est l&#8217;identifiant de votre Equipe de Développement Apple) :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>DEVELOPMENT_TEAM = &lt;Team ID&gt;
+CODE_SIGN_IDENTITY = iPhone Developer</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Ce fichier sera utilisé plus loin lors de l&#8217;exécution. Voir la section <a href="#installation_externaltools_appium_en_appium_server_installation_run">Exécution</a> pour plus de détails.</p>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="installation_externaltools_appium_en_appium_server_installation_run">Exécutions</h5>
+<div class="paragraph">
+<p>L&#8217;exécution du serveur Appium peut différée selon son mode d&#8217;installation:</p>
+</div>
+<div class="sect5">
+<h6 id="_installation_via_npm">Installation via npm</h6>
+<div class="paragraph">
+<p>Si le serveur Appium a été installé via <em>npm</em>, exécuter simplement :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>appium</pre>
+</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_installation_à_partir_du_code_source">Installation à partir du code source</h6>
+<div class="paragraph">
+<p>Si le serveur Appium a été installé à partir de son code source, nous encourageons à créer un fichier exécutable contenant les commandes à exécuter pour démarrer le serveur. De fait, la maintenance et l&#8217;utilisation en sera simplifiée. Ainsi :</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Créer un fichier <em>appium</em> file avec le contenu suivant :</p>
+<div class="listingblock">
+<div class="content">
+<pre>#!/bin/bash
+cd /chemin/vers/le/code/source/appium &amp;&amp; node . "$@"</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Rendre ce fichier exécutable</p>
+<div class="listingblock">
+<div class="content">
+<pre>chmod +x /chemin/vers/le/fichier/créé</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Localiser le dossier de ce fichier et le renseigner au sein de votre variable <code>PATH</code>, en éditant votre fichier <em>~/.bash_profile</em> (ou tout autre fichier de démarrage de session) :</p>
+<div class="listingblock">
+<div class="content">
+<pre>export PATH=/chemin/vers/le/dossier/du/fichier/créé:$PATH</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Redémarrer la session du Terminal</p>
+</li>
+<li>
+<p>Démarrer le serveur Appium en exécutant</p>
+<div class="listingblock">
+<div class="content">
+<pre>appium</pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect5">
+<h6 id="installation_externaltools_appium_en_note_for_IOS_application_testing">Note pour le test d&#8217;applications IOS</h6>
+<div class="paragraph">
+<p>Comme vu lors de la <a href="#installation_externaltools_appium_en_appium_server_installation_application_sign_configuration">section précédente</a>, Appium doit pouvoir accéder aux informations lui permettant de signer une application.
+Ceci peut être réalisé en fournissant la capabilité <code>xcodeConfigFile</code> au démarrage du serveur Appium.</p>
+</div>
+<div class="paragraph">
+<p>Vous pourriez souhaiter (ce qui est même préférable) de fournir cette valeur à chaque requête cliente. Notamment car il s&#8217;agit souvent de la même Equipe de Développement Apple au sein d&#8217;une même organisation.
+Cette réflexion peut également être apportée pour la capabilité obligatoire <code>realDeviceLogger</code> qui sera toujours pointée vers l&#8217;installation de <a href="https://github.com/appium/deviceconsole">deviceconsole</a>.</p>
+</div>
+<div class="paragraph">
+<p>Dans ce cas, il vous est possible d&#8217;utiliser l&#8217;option de démarrage  <code>--default-capabilities</code>, permettant de fournir les capabilités par défaut qui seront prises en compte à chauqe requête cliente.
+Pour facilité son utilisation, nous optons sur l&#8217;utilisation d&#8217;un fichier JSON dédié. Pour cela :</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Créer un fichier nommé <em>common.caps</em> (par exemple) contenant les lignes suivantes :</p>
+<div class="listingblock">
+<div class="content">
+<pre>{
+    "xcodeConfigFile": "/chemin/vers/le/fichier/appium.xcconfig",
+	"realDeviceLogger": "/usr/local/lib/node_modules/deviceconsole/deviceconsole"
+}</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Puis démarrer le serveur Appium en lui précisant les capabilités par défaut :</p>
+<div class="listingblock">
+<div class="content">
+<pre>appium --default-capabilities /chemin/vers/le/fichier/common.caps</pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="installation_externaltools_appium_en_client_use">27.2.3. Utilisations clientes</h4>
+<div class="paragraph">
+<p>La section suivante présente différents cas d&#8217;utilisation pour l&#8217;utilisation du serveur Appium.</p>
+</div>
+<div class="sect4">
+<h5 id="_exécuter_un_cas_de_test_mobile_avec_cerberus">Exécuter un cas de test mobile avec Cerberus</h5>
+<div class="paragraph">
+<p>Une fois le cas de test écrit, Cerberus peut exécuter ce cas de test sur le mobile souhaité en configurant au préalable un Robot associé.</p>
+</div>
+<div class="paragraph">
+<p>Au sein de Cerberus, ouvrir la page des Robots (Exécuter &#8594; Robot), et, en fonction du type d&#8217;application à tester :</p>
+</div>
+<div class="sect5">
+<h6 id="_android_2">Android</h6>
+<div class="paragraph">
+<p><span class="image"><img src="images/robotandroiddefinition.png" alt="Robot definition"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/robotandroidcapabilities.png" alt="Robot capabilities"></span></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Ces valeurs sont données à titre d&#8217;exemple. N&#8217;hésitez pas à les modifier à votre guise.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_ios_2">IOS</h6>
+<div class="paragraph">
+<p><span class="image"><img src="images/robotiosdefinition.png" alt="Robot definition"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/robotioscapabilities.png" alt="Robot capabilities"></span></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Ces valeurs sont données à titre d&#8217;exemple. N&#8217;hésitez pas à les modifier à votre guise.</p>
+</div>
+<div class="paragraph">
+<p>Les deux dernieres capabilités <code>xcodeConfigFile</code> and <code>realDeviceLogger</code> ne sont pas nécessaires si elles sont déjà déclarées au démarrage du serveur Appium. Voir <a href="#installation_externaltools_appium_en_note_for_IOS_application_testing">la section précédente</a> pour plus de détails.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_inspection">Inspection</h5>
+<div class="paragraph">
+<p>L&#8217;inspection est utilisée pour localiser les éléments d&#8217;une application. Elle fournit alors les identificateurs (id, XPath, etc.) permettant d&#8217;alimenter les cas de tests Cerberus pour localiser les éléments.</p>
+</div>
+<div class="paragraph">
+<p>L&#8217;inspection peut être réalisée grâce à l&#8217;application cliente Appium.</p>
+</div>
+<div class="sect5">
+<h6 id="_installation_3">Installation</h6>
+<div class="paragraph">
+<p>Installer la dernière version de l&#8217;application cliente Appium disponible sur la <a href="https://bitbucket.org/appium/appium.app/downloads/">page officielle</a>.</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_configuration">Configuration</h6>
+<div class="paragraph">
+<p>L&#8217;application cliente Appium <strong>doit être configurée pour n&#8217;être utilisée que pour l&#8217;inspection</strong>.
+Ainsi,</p>
+</div>
+<div class="paragraph">
+<p>Au sein du menu <em>General settings</em> :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Renseigner le champ <em>Server address</em> avec l&#8217;adresse du serveur Appium</p>
+</li>
+<li>
+<p>Renseigner le champ <em>Port</em> avec le numéro du port sur serveur Appium</p>
+</li>
+<li>
+<p>Cocher la case <em>Use Remote Server</em></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/appiumclientinterfacegeneralsettings.png" alt="General settings"></span></p>
+</div>
+<div class="paragraph">
+<p>Pour une inspection Android, ouvrir le menu Android et :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Renseigner <em>App Path</em> avec le chemin absolu (ou l&#8217;URL) de l&#8217;APK de application</p>
+</li>
+<li>
+<p>Renseigner <em>Platform Name</em> par <code>Android</code></p>
+</li>
+<li>
+<p>Renseigner <em>Automation Name</em> par <code>Appium</code></p>
+</li>
+<li>
+<p>Renseigner <em>Platform Version</em> avec la version Android du mobile testé</p>
+</li>
+<li>
+<p>Renseigner <em>Device Name</em> avec le nom du mobile testé</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/appiumclientinterfaceandroidsettings.png" alt="Android settings"></span></p>
+</div>
+<div class="paragraph">
+<p>Pour une inspection IOS, ouvrir le menu IOS et :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Renseigner <em>App Path</em> avec le chemin absolu (ou l&#8217;URL) de l&#8217;IPA de l&#8217;application</p>
+</li>
+<li>
+<p>Renseigner <em>Force device</em> avec le nom du mobile testé</p>
+</li>
+<li>
+<p>Renseigner <em>Platform version</em> avec la version IOS du mobile testé. Cette version doit être inférieure ou égale à la version disponible au sein du poste hébergeant le serveur Appium (e.g., 10.1 avec Xcode 8).</p>
+</li>
+<li>
+<p>Renseigner <em>UDID</em> avec l&#8217;UDID du mobilé testé</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/appiumclientinterfaceiossettings.png" alt="IOS settings"></span></p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_exécution">Exécution</h6>
+<div class="paragraph">
+<p>Une fois l&#8217;application client Appium correctement configurée, sélectionner le bouton radio correspondant au type de l&#8217;application à tester (Android ou IOS) et cliquer sur le bouton d&#8217;Inspection.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/appiuminspector.png" alt="Appium Inspector"></span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="installation_externaltools_appium_en_useful_links">27.2.4. Liens utiles</h4>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Titre</th>
+<th class="tableblock halign-left valign-top">Lien</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Liste des capabilités de serveur Appium (en)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/caps.md" class="bare">https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/caps.md</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_sikuli">27.3. Sikuli</h3>
+<div class="paragraph">
+<p>Unresolved directive in documentation_fr.adoc - include::include/fr/installation_externaltools_sikuli_fr.adoc[]</p>
+</div>
 </div>
 </div>
 </div>
@@ -2147,7 +2870,7 @@ Private invariants are not editable because used by the Cerberus engine or the u
 </div>
 </div>
 <div class="sect1">
-<h2 id="_performance">29. Performance</h2>
+<h2 id="_performance">28. Performance</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Maintenance monitoring Cerberus</p>
@@ -2158,7 +2881,7 @@ Private invariants are not editable because used by the Cerberus engine or the u
 </div>
 </div>
 <div class="sect1">
-<h2 id="_nettoyage_de_la_bdd">30. Nettoyage de la BDD</h2>
+<h2 id="_nettoyage_de_la_bdd">29. Nettoyage de la BDD</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Maintenance Purge Database</p>
@@ -2169,7 +2892,7 @@ Private invariants are not editable because used by the Cerberus engine or the u
 </div>
 </div>
 <div class="sect1">
-<h2 id="_mise_à_jour_de_cerberus">31. Mise à jour de Cerberus</h2>
+<h2 id="_mise_à_jour_de_cerberus">30. Mise à jour de Cerberus</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Maintenance Upgrade Cerberus Version</p>
@@ -2182,7 +2905,7 @@ Private invariants are not editable because used by the Cerberus engine or the u
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-10-10 15:25:44 +02:00
+Last updated 2016-12-14 17:47:15 +01:00
 </div>
 </div>
 </body>

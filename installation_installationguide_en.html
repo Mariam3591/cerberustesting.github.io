@@ -419,12 +419,94 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div class="sect2">
 <h3 id="_docker">Docker</h3>
-
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong><span class="RED">For Windows</span></strong> :</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Install Git for Windows -&#8594; <a href="https://git-for-windows.github.io/" class="bare">https://git-for-windows.github.io/</a></p>
+</li>
+<li>
+<p>Install Docker for Windows -&#8594; <a href="https://docs.docker.com/docker-for-windows/" class="bare">https://docs.docker.com/docker-for-windows/</a></p>
+</li>
+<li>
+<p>Install Docker Toolbox for Windows -&#8594; <a href="https://docs.docker.com/toolbox/toolbox_install_windows/" class="bare">https://docs.docker.com/toolbox/toolbox_install_windows/</a></p>
+</li>
+<li>
+<p>Clone Cerberus-docker to the desired location :</p>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p>Go to the desired location folder</p>
+</li>
+<li>
+<p>Right click into the folder, and click Git Bash Here <span class="image" style="float: right"><img src="images/installationinstallationguidegitbashhere.png" alt="gitBashHere"></span></p>
+</li>
+<li>
+<p>Type the following command into Git Cmd Prompt : "git clone <a href="https://github.com/cerberustesting/cerberus-docker.git"" class="bare">https://github.com/cerberustesting/cerberus-docker.git"</a> <span class="image" style="float: right"><img src="images/installationinstallationguidegitbashprompt.png" alt="gitBashPrompt"></span></p>
+</li>
+<li>
+<p>Wait for cerberus-docker to clone&#8230;&#8203;</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Run Docker. /!\ You may have to go into Docker settings to "share the drive" on which you put cerberus</p>
+</li>
+<li>
+<p>Run Windows Command Prompt as administrator, navigate to your desired location, then subfolders compositions/cerberus-glassfish-mysql <span class="image" style="float: right"><img src="images/installationinstallationwincmdprompt.png" alt="winCmdPrompt"></span></p>
+</li>
+<li>
+<p>Execute the following command :</p>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p>either "docker-compose up" to run the docker-compose normally</p>
+</li>
+<li>
+<p>or "docker-compose up -d" to run the docker-compose asynchronously</p>
+</li>
+<li>
+<p>or "docker-compose up -d --remove-orphans" to run the docker-compose and remove already existing images</p>
+</li>
+<li>
+<p>or "docker-compose scale selenium-node-firefox=3 selenium-node-chrome=3" to add more nodes to your Selenium Grid</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Wait for the images to startup</p>
+</li>
+<li>
+<p>Open your favorite browser and go to &lt;docker_host&gt;:18080/Cerberus, where &lt;docker_host&gt; is your Docker host</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Further details available at <a href="https://github.com/cerberustesting/cerberus-docker/tree/master/compositions/cerberus-glassfish-mysql" class="bare">https://github.com/cerberustesting/cerberus-docker/tree/master/compositions/cerberus-glassfish-mysql</a></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong><span class="RED">For Mac</span></strong> :</p>
+</li>
+<li>
+<p><strong><span class="RED">For Linux</span></strong> :</p>
+</li>
+</ol>
+</div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-10-10 15:25:44 +02:00
+Last updated 2016-12-12 17:04:43 +01:00
 </div>
 </div>
 </body>

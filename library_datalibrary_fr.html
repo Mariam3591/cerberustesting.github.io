@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.2">
-<title>Untitled</title>
+<title>Créer une donnée</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -416,14 +416,154 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>In this section, you will find information on data library in Cerberus.</p>
+<p>Dans cette section, vous retrouverez toutes les informations sur la gestion des données via la datalibrary.</p>
 </div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_créer_une_donnée">Créer une donnée</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Cliquer sur <strong><span class="red">Data &#8594; Data Library</span></strong>. <span class="image" style="float: right"><img src="images/testdatapage.png" alt="testdatapage" width="300" height="300"></span></p>
+</li>
+<li>
+<p>Cliquer sur <strong><span class="red">Create New Entry</span></strong> button.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Indiquer le <strong><span class="red">Nom</span></strong></p>
+</li>
+<li>
+<p>Selectionner le <strong><span class="red">Type</span></strong> de la donnée.</p>
+</li>
+<li>
+<p>Selectionner un <strong><span class="green">Système</span></strong>, un <strong><span class="green">Environnement</span></strong>, un <strong><span class="green">Pays</span></strong> (champs non obligatoires).</p>
+</li>
+<li>
+<p>Remplir les champs liés à votre <strong><span class="red">configuration</span></strong>.</p>
+</li>
+<li>
+<p>Remplir une <strong><span class="green">Description</span></strong>.</p>
+</li>
+<li>
+<p>Aller dans l&#8217;onglet <strong><span class="red">SubData</span></strong></p>
+</li>
+<li>
+<p>Remplir les informations de vos subdatas liées à votre configuration. Se référer à la section Configurations des données pour plus d&#8217;informations.</p>
+</li>
+<li>
+<p>Cliquer sur <strong><span class="red">Ajouter</span></strong>.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>La première subdata ne requiert pas de nom. %my_data% retournera la valeur de la subdata 1 et %my_data(sub-data2)% retournera la valeur de la subdata 2.</p>
+</div>
+<div class="paragraph">
+<p>Si aucun environnement, système ou pays n&#8217;est sélectionné, la donnée sera disponible sur tous les environnements, systèmes et pays.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_configurations_des_données">Configurations des données</h3>
+<div class="sect3">
+<h4 id="_configuration_interne">configuration Interne</h4>
+<div class="paragraph">
+<p>Pas de configuration spécifique, seule une valeur statique est requise dans l&#8217;onglet subdata.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/testdatacreatenewsubdata.PNG" alt="Logo"></span></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_configuration_soap">configuration SOAP</h4>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Champ</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Description</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Base de données</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Base de données ou le Database where the Service Path will be requested. (non obligatoire)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Service Path</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Localisation du service. Exemple: <a href="http://mydomain/mywebservicelocationmywebservicelocation" class="bare">http://mydomain/mywebservicelocationmywebservicelocation</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Opération</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Opérations invoquée par l&#8217;appel SOAP.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enveloppe</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Message qui sera envoyé par la requête SOAP.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_configuration_sql">configuration SQL</h4>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Champ</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Description</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Base de données</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Base de données où la requête doit être executer .</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Requête</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Requête à executer.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_csv_configuration">CSV configuration</h4>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Champ</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Description</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Base de données</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TBD</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CSV URL</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CSV URL indique l&#8217;URL ou le CSV est accessible.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Séparateur</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Séparateur utilisé par le CSV.</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-10-10 15:25:44 +02:00
+Last updated 2016-12-12 17:04:43 +01:00
 </div>
 </div>
 </body>
