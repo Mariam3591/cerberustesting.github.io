@@ -567,6 +567,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_selenium">27.1. Selenium</a></li>
 <li><a href="#_appium">27.2. Appium</a></li>
 <li><a href="#_sikuli">27.3. Sikuli</a></li>
+<li><a href="#_cloud">27.4. Cloud</a></li>
 </ul>
 </li>
 </ul>
@@ -897,7 +898,7 @@ How it is organized, How the tables are Customizable&#8230;&#8203;etc.</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Go to <strong><span class="red">TestCase &#8594; TestCase List</span></strong>. <span class="image" style="float: right"><img src="images/testcasecreate.png" alt="CreateTestCase" width="200" height="200"></span></p>
+<p>Go to <strong><span class="red">TestCase &#8594; TestCase List</span></strong>. <span class="image" style="float: right"><img src="images/testcasecreate.png" alt="CreateTestCase" width="250" height="250"></span></p>
 </li>
 <li>
 <p>Click on <strong><span class="red">Create TestCase</span></strong>.</p>
@@ -924,20 +925,399 @@ How it is organized, How the tables are Customizable&#8230;&#8203;etc.</p>
 <div class="sect2">
 <h3 id="_implement_testcase">5.5. Implement TestCase</h3>
 <div class="sect3">
-<h4 id="_action">5.5.1. Action</h4>
-
+<h4 id="_step">5.5.1. Step</h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Click on <strong><span class="red">Add step</span></strong> to display the following window.  <span class="image" style="float: right"><img src="images/testcasepage.PNG" alt="TestCasePage" width="250" height="250"></span></p>
+</li>
+<li>
+<p>Feed a <strong><span class="red">Description</span></strong> and click on <strong><span class="red">Add</span></strong> for a new step.</p>
+</li>
+<li>
+<p>Or search for a step in library then click on <strong><span class="red">Add</span></strong>.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/testcaseaddstep.png" alt="testcaseaddstep"></span></p>
+</div>
+<div class="paragraph">
+<p>Your step is created. if you want to put it in library, just click on the book on the right side.
+A step in library will be available to add it in all test cases of your current system.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/testcasesteplibrary.png" alt="testcasesteplibrary"></span></p>
+</div>
+<div class="paragraph">
+<p>In the following screenshot you can see a use step. This step is imported from the previous library step.
+You are not able to modify it (all fields are grey). But you can find a link at the top to open the library if you want to modify your step. All use steps from this library will be impacted by your modification.</p>
+</div>
+<div class="paragraph">
+<p>To modify only this use step, you have to click on the padlock icon but it will not be a use step anymore. (modification on library step will not affect it)</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/testcaseusestep.png" alt="testcaseusestep"></span></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+You have the possibility to switch the position of your steps by clicking on the 3 dots.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/testcasemovestep1.png" alt="testcaseusestep"></span> <span class="image"><img src="images/testcasemovestep2.png" alt="testcaseusestep"></span></p>
+</div>
 </div>
 <div class="sect3">
-<h4 id="_control">5.5.2. Control</h4>
-
+<h4 id="_action">5.5.2. Action</h4>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 33%;">
+<col style="width: 33%;">
+<col style="width: 33%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Action</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Description</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Example</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unknown</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unknown action. Default Action when creating a new action</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">keypress</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">will allow you to press any key in the current web page. <strong><span class="red">Value1</span></strong>	: Keycode of the key to press Example : ENTER</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">hidekeyboard</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hide the currently visible keyboard</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">swipe</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TBD</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">click</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">will allow you to click on an element inside the current page.
+<strong><span class="red">Value1</span></strong>	Identifier and name of the element to click in the form of : identifier=html_reference. Example : id=html_reference</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mouseButtonLeftPress</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TBD</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mouseButtonLeftRelease</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TBD</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">doubleClick</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">will allow you to double click on an element inside the current page.
+<strong><span class="red">Value1</span></strong>	Identifier and name of the element to click in the form of : identifier=html_reference. Example : id=html_reference</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rightClick</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">will allow you to right click on an element inside the current page.
+<strong><span class="red">Value1</span></strong>	Identifier and name of the element to click in the form of : identifier=html_reference. Example : id=html_reference</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">focustoIframe</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TBD</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">focustoDefaultIframe</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TBD</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Switchtowindow</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TBD</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">manageDialog</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TBD</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mouseOver</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mouse cursor over an object <strong><span class="red">Element path</span></strong> : the id of the element</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OpenUrlWithBase</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TBD</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OpenUrlLogin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TBD</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OpenUrl</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TBD</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">select</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TBD</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Write a data in a field. <strong><span class="red">Element path</span></strong> : the id of the field  <strong><span class="red">Property Name</span></strong> : the property containing the value to type (can be a property or text.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">wait</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Wait for a certain amount of time Feed a number (ms) or wait for element present feed an element (xpath)</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CallSoapWithBase</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TBD</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CallSoap</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To call a SOAP.  Feed one the following field <strong><span class="red">Soap Name (library)</span></strong> : Name of the SOAP stored in library  <strong><span class="red">Property Name</span></strong> : Name of the property if the SOAP is defined in property</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">removeDifference</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TBD</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">executeSqlUpdate</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">will allow you to execute SQL update (insert,delete,update). Feed the <strong><span class="red">Database Name</span></strong> and the <strong><span class="red">Script</span></strong> to execute. Database has to be declared to your system and environment.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">executeSqlStoredProcedure</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">will allow you to execute SQL stored procedure. Feed the <strong><span class="red">Database Name</span></strong> and the <strong><span class="red">Stored Procedure</span></strong> to execute. Database has to be declared to your system and environment.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CalculateProperty</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">will allow you to calculate a <strong><span class="red">Property</span></strong> defined in the property section of the test case.
+[Optional] Feed <strong><span class="red">Value2</span></strong> with another property to affect to the previous <strong><span class="red">Property Name</span></strong> a new value. Useful to override the one defined from the property section during an execution.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">doNothing</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Just perform no action. No action will be executed and engine will go to the next action or control</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">skipAction</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Skip this action. No action will be executed and engine will go to the next action. Controls associated to this action will be skipped too.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="sect3">
-<h4 id="_property">5.5.3. Property</h4>
+<h4 id="_control">5.5.3. Control</h4>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 33%;">
+<col style="width: 33%;">
+<col style="width: 33%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Control</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Description</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Example</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unknown</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Default control when creating a new control</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">getPageSource</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TBD</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">skipControl</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Skip the control.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">takeScreenshot</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Take a screenshot</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">verifyElementClickable</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><span class="green">OK</span></strong> if <strong><span class="red">Element</span></strong> is clickable.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">verifyElementDifferent</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TBD</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">verifyElementinElement</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TBD</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">verifyElementEquals</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TBD</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">verifyElementNotClickable</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TBD</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">verifyElementNotPresent</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TBD</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">verifyElementNotVisible</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TBD</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">verifyElementPresent</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><span class="green">OK</span></strong> if <strong><span class="red">Element</span></strong> is found on the current page.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">verifyElementVisible</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><span class="green">OK</span></strong> if <strong><span class="red">Element</span></strong> is visible on the current page.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">verifyElementDifferent</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TBD</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">verifyIntegerEquals</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><span class="green">OK</span></strong> if the <strong><span class="red">Integer1</span></strong> is equal to the <strong><span class="red">Integer2</span></strong>.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">verifyIntegerGreater</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><span class="green">OK</span></strong> if the <strong><span class="red">Integer1</span></strong> is greater than the <strong><span class="red">Integer2</span></strong>.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">verifyIntegerMinor</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><span class="green">OK</span></strong> if the <strong><span class="red">Integer1</span></strong> is lower than the <strong><span class="red">Integer2</span></strong>.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">verifyRegexInElement</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TBD</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">verifyStringContains</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><span class="green">OK</span></strong> if Property <strong><span class="red">String1</span></strong> contains the <strong><span class="red">String2</span></strong>.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">verifyStringEqual</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><span class="green">OK</span></strong> if the <strong><span class="red">String1</span></strong> is equal to the <strong><span class="red">String2</span></strong>.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">verifyStringGreater</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><span class="green">OK</span></strong> if the <strong><span class="red">String1</span></strong> is greater than to the <strong><span class="red">String2</span></strong> (After in a dictonnary)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><span class="red">String1</span></strong> : ZZZ  <strong><span class="red">String2</span></strong> : AAA</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">verifyStringMinor</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><span class="green">OK</span></strong> if the <strong><span class="red">String1</span></strong> is minor than to the <strong><span class="red">String2</span></strong> (before in a dictonnary)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><span class="red">String1</span></strong> : AAA  <strong><span class="red">String2</span></strong> : ZZZ</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">verifyTextInDialog</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TBD</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">verifyTextInElement</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><span class="green">OK</span></strong> if the text found in <strong><span class="red">Element</span></strong> is equal to the <strong><span class="red">Text</span></strong> indicated</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><span class="red">Element</span></strong> : //StatusCode  <strong><span class="red">Text</span></strong> : OK</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">verifyTextInPage</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TBD</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">verifyTextNotInElement</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><span class="green">OK</span></strong> if the text found in <strong><span class="red">Element</span></strong> is not equal to the <strong><span class="red">Text</span></strong> indicated</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><span class="red">Element</span></strong> : //StatusCode  <strong><span class="red">Text</span></strong> : KO</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">verifyTextNotInPage</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TBD</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">verifyTitle</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TBD</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">verifyUrl</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><span class="green">OK</span></strong> if the <strong><span class="red">URL</span></strong> of the current page equal to the <strong><span class="red">URL</span></strong> indicated .</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">verifyXmlTreeStructure</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TBD</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_property">5.5.4. Property</h4>
 <div class="paragraph">
 <p>When Clicking on Button <span class="image"><img src="images/buttonmanageproperties.png" alt="buttonManageProperties"></span>, the Window "Manage Properties" will open.
-From there you can
-. either manage your TestCase properties
-. or see your inherited properties - coming from the step libraries of your use steps.</p>
+From there you can :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>either manage your TestCase properties</p>
+</li>
+<li>
+<p>or see your inherited properties - coming from the step libraries of your use steps.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="images/windowmanageproperties.png" alt="windowManageProperties"></span></p>
@@ -992,7 +1372,7 @@ From there you can
 </table>
 </div>
 <div class="sect3">
-<h4 id="_variables">5.5.4. Variables</h4>
+<h4 id="_variables">5.5.5. Variables</h4>
 <div class="paragraph">
 <p>You can use variables in the action and control&#8217;s values.
 These variable are define in cerberus and you can have access to them with the right syntax.</p>
@@ -1207,6 +1587,22 @@ These variable are define in cerberus and you can have access to them with the r
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p>You will find below some tricks which help you to implement specific test cases.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+It is possible to create a random property with a number of digit defined. You have to feed the property fields like the screenshot below. This property will be different for each execution. Example: 884592, 004795
+<span class="image"><img src="images/testcaserandomproperty.PNG" alt="TestCaseRandomProperty"></span>
+</td>
+</tr>
+</table>
+</div>
 <div class="paragraph">
 <p><a href="https://github.com/vertigo17/Cerberus/edit/master/source/src/main/resources/documentation/include/en/testmanagement_testcase_en.adoc" target="_blank"><span class="image"><img src="images/edit-doc.png" alt="FR" width="20" height="20"></span></a> <em>Something is incorrect/missing in this section? Feel free to submit modification.</em></p>
 </div>
@@ -2655,7 +3051,8 @@ Private invariants are not editable because used by the Cerberus engine or the u
 </tbody>
 </table>
 <div class="paragraph">
-<p>The following sections will cover installation and configuration procedures for each associated external tool.</p>
+<p>The following sections will cover installation and configuration procedures for each associated external tool, and
+interface description with cloud-based cross-browser testing tools.</p>
 </div>
 <div class="sect2">
 <h3 id="_selenium">27.1. Selenium</h3>
@@ -3104,6 +3501,23 @@ Values are given as example. feel free to modify them according to your needs.
 <p>Unresolved directive in documentation_en.adoc - include::include/en/installation_externaltools_sikuli_en.adoc[]</p>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_cloud">27.4. Cloud</h3>
+<div class="paragraph">
+<p>For Web and Mobile testing, Cerberus can be intefaced with cloud-based testing tool to avoid to manage complexity of robot farm management.
+Multiple combination of operating system, browser and version are available.</p>
+</div>
+<div class="paragraph">
+<p>In the Cerberus demo integration chain, functionnal tests are executed through BrowserStack,
+that allow to validate the regression for each commit.</p>
+</div>
+<div class="paragraph">
+<p><a href="http://browserstack.com/"><span class="image"><img src="images/browserstack-logo.png" alt="Browserstack" width="200" height="100"></span></a></p>
+</div>
+<div class="paragraph">
+<p>To run your tests on BrowserStack Automate, you must configure a Robot in Cerberus with your BrowserStack account information.</p>
+</div>
+</div>
 </div>
 </div>
 <h1 id="_maintenance" class="sect0">Maintenance</h1>
@@ -3153,7 +3567,7 @@ Values are given as example. feel free to modify them according to your needs.
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-12-14 17:47:15 +01:00
+Last updated 2017-03-24 11:43:21 +01:00
 </div>
 </div>
 </body>
