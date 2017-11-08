@@ -4,20 +4,19 @@
 <meta charset="UTF-8">
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 1.5.2">
+<meta name="generator" content="Asciidoctor 1.5.6.1">
 <title>TestCase List</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
-/* Remove the comments around the @import statement below when using this as a custom stylesheet */
-/*@import "https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400";*/
+/* Remove comment around @import statement below when using as a custom stylesheet */
+/*@import "https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700";*/
 article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}
 audio,canvas,video{display:inline-block}
 audio:not([controls]){display:none;height:0}
 [hidden],template{display:none}
 script{display:none!important}
 html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
-body{margin:0}
 a{background:transparent}
 a:focus{outline:thin dotted}
 a:active,a:hover{outline:0}
@@ -52,12 +51,11 @@ textarea{overflow:auto;vertical-align:top}
 table{border-collapse:collapse;border-spacing:0}
 *,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
 html,body{font-size:100%}
-body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto}
+body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto;tab-size:4;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
 a:hover{cursor:pointer}
 img,object,embed{max-width:100%;height:auto}
 object,embed{height:100%}
 img{-ms-interpolation-mode:bicubic}
-#map_canvas img,#map_canvas embed,#map_canvas object,.map_canvas img,.map_canvas embed,.map_canvas object{max-width:none!important}
 .left{float:left!important}
 .right{float:right!important}
 .text-left{text-align:left!important}
@@ -65,10 +63,11 @@ img{-ms-interpolation-mode:bicubic}
 .text-center{text-align:center!important}
 .text-justify{text-align:justify!important}
 .hide{display:none}
-.antialiased,body{-webkit-font-smoothing:antialiased}
-img{display:inline-block;vertical-align:middle}
+img,object,svg{display:inline-block;vertical-align:middle}
 textarea{height:auto;min-height:50px}
 select{width:100%}
+.center{margin-left:auto;margin-right:auto}
+.spread{width:100%}
 p.lead,.paragraph.lead>p,#preamble>.sectionbody>.paragraph:first-of-type p{font-size:1.21875em;line-height:1.6}
 .subheader,.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{line-height:1.45;color:#7a2518;font-weight:400;margin-top:0;margin-bottom:.25em}
 div,dl,dt,dd,ul,ol,li,h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6,pre,form,p,blockquote,th,td{margin:0;padding:0;direction:ltr}
@@ -90,13 +89,12 @@ strong,b{font-weight:bold;line-height:inherit}
 small{font-size:60%;line-height:inherit}
 code{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;color:rgba(0,0,0,.9)}
 ul,ol,dl{font-size:1em;line-height:1.6;margin-bottom:1.25em;list-style-position:outside;font-family:inherit}
-ul,ol,ul.no-bullet,ol.no-bullet{margin-left:1.5em}
+ul,ol{margin-left:1.5em}
 ul li ul,ul li ol{margin-left:1.25em;margin-bottom:0;font-size:1em}
 ul.square li ul,ul.circle li ul,ul.disc li ul{list-style:inherit}
 ul.square{list-style-type:square}
 ul.circle{list-style-type:circle}
 ul.disc{list-style-type:disc}
-ul.no-bullet{list-style:none}
 ol li ul,ol li ol{margin-left:1.25em;margin-bottom:0}
 dl dt{margin-bottom:.3125em;font-weight:bold}
 dl dd{margin-bottom:1.25em}
@@ -111,7 +109,8 @@ blockquote,blockquote p{line-height:1.6;color:rgba(0,0,0,.85)}
 h1{font-size:2.75em}
 h2{font-size:2.3125em}
 h3,#toctitle,.sidebarblock>.content>.title{font-size:1.6875em}
-h4{font-size:1.4375em}}table{background:#fff;margin-bottom:1.25em;border:solid 1px #dedede}
+h4{font-size:1.4375em}}
+table{background:#fff;margin-bottom:1.25em;border:solid 1px #dedede}
 table thead,table tfoot{background:#f7f8f7;font-weight:bold}
 table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{padding:.5em .625em .625em;font-size:inherit;color:rgba(0,0,0,.8);text-align:left}
 table tr th,table tr td{padding:.5625em .625em;font-size:inherit;color:rgba(0,0,0,.8)}
@@ -121,13 +120,21 @@ h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2;word-s
 h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title strong,h4 strong,h5 strong,h6 strong{font-weight:400}
 .clearfix:before,.clearfix:after,.float-group:before,.float-group:after{content:" ";display:table}
 .clearfix:after,.float-group:after{clear:both}
-*:not(pre)>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background-color:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed}
+*:not(pre)>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background-color:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed;word-wrap:break-word}
+*:not(pre)>code.nobreak{word-wrap:normal}
+*:not(pre)>code.nowrap{white-space:nowrap}
 pre,pre>code{line-height:1.45;color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;text-rendering:optimizeSpeed}
+em em{font-style:normal}
+strong strong{font-weight:400}
 .keyseq{color:rgba(51,51,51,.8)}
-kbd{display:inline-block;color:rgba(0,0,0,.8);font-size:.75em;line-height:1.4;background-color:#f7f7f7;border:1px solid #ccc;-webkit-border-radius:3px;border-radius:3px;-webkit-box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em white inset;box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em #fff inset;margin:-.15em .15em 0 .15em;padding:.2em .6em .2em .5em;vertical-align:middle;white-space:nowrap}
+kbd{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;display:inline-block;color:rgba(0,0,0,.8);font-size:.65em;line-height:1.45;background-color:#f7f7f7;border:1px solid #ccc;-webkit-border-radius:3px;border-radius:3px;-webkit-box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em white inset;box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em #fff inset;margin:0 .15em;padding:.2em .5em;vertical-align:middle;position:relative;top:-.1em;white-space:nowrap}
 .keyseq kbd:first-child{margin-left:0}
 .keyseq kbd:last-child{margin-right:0}
-.menuseq,.menu{color:rgba(0,0,0,.8)}
+.menuseq,.menuref{color:#000}
+.menuseq b:not(.caret),.menuref{font-weight:inherit}
+.menuseq{word-spacing:-.02em}
+.menuseq b.caret{font-size:1.25em;line-height:.8}
+.menuseq i.caret{font-weight:bold;text-align:center;width:.45em}
 b.button:before,b.button:after{position:relative;top:-1px;font-weight:400}
 b.button:before{content:"[";padding:0 3px 0 2px}
 b.button:after{content:"]";padding:0 2px 0 3px}
@@ -155,29 +162,33 @@ p a>code:hover{color:rgba(0,0,0,.9)}
 #toc ul.sectlevel0>li>a{font-style:italic}
 #toc ul.sectlevel0 ul.sectlevel1{margin:.5em 0}
 #toc ul{font-family:"Open Sans","DejaVu Sans",sans-serif;list-style-type:none}
+#toc li{line-height:1.3334;margin-top:.3334em}
 #toc a{text-decoration:none}
 #toc a:active{text-decoration:underline}
 #toctitle{color:#7a2518;font-size:1.2em}
 @media only screen and (min-width:768px){#toctitle{font-size:1.375em}
 body.toc2{padding-left:15em;padding-right:0}
 #toc.toc2{margin-top:0!important;background-color:#f8f8f7;position:fixed;width:15em;left:0;top:0;border-right:1px solid #efefed;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto}
-#toc.toc2 #toctitle{margin-top:0;font-size:1.2em}
+#toc.toc2 #toctitle{margin-top:0;margin-bottom:.8rem;font-size:1.2em}
 #toc.toc2>ul{font-size:.9em;margin-bottom:0}
 #toc.toc2 ul ul{margin-left:0;padding-left:1em}
 #toc.toc2 ul.sectlevel0 ul.sectlevel1{padding-left:0;margin-top:.5em;margin-bottom:.5em}
 body.toc2.toc-right{padding-left:0;padding-right:15em}
-body.toc2.toc-right #toc.toc2{border-right-width:0;border-left:1px solid #efefed;left:auto;right:0}}@media only screen and (min-width:1280px){body.toc2{padding-left:20em;padding-right:0}
+body.toc2.toc-right #toc.toc2{border-right-width:0;border-left:1px solid #efefed;left:auto;right:0}}
+@media only screen and (min-width:1280px){body.toc2{padding-left:20em;padding-right:0}
 #toc.toc2{width:20em}
 #toc.toc2 #toctitle{font-size:1.375em}
 #toc.toc2>ul{font-size:.95em}
 #toc.toc2 ul ul{padding-left:1.25em}
-body.toc2.toc-right{padding-left:0;padding-right:20em}}#content #toc{border-style:solid;border-width:1px;border-color:#e0e0dc;margin-bottom:1.25em;padding:1.25em;background:#f8f8f7;-webkit-border-radius:4px;border-radius:4px}
+body.toc2.toc-right{padding-left:0;padding-right:20em}}
+#content #toc{border-style:solid;border-width:1px;border-color:#e0e0dc;margin-bottom:1.25em;padding:1.25em;background:#f8f8f7;-webkit-border-radius:4px;border-radius:4px}
 #content #toc>:first-child{margin-top:0}
 #content #toc>:last-child{margin-bottom:0}
 #footer{max-width:100%;background-color:rgba(0,0,0,.8);padding:1.25em}
 #footer-text{color:rgba(255,255,255,.8);line-height:1.44}
 .sect1{padding-bottom:.625em}
-@media only screen and (min-width:768px){.sect1{padding-bottom:1.25em}}.sect1+.sect1{border-top:1px solid #efefed}
+@media only screen and (min-width:768px){.sect1{padding-bottom:1.25em}}
+.sect1+.sect1{border-top:1px solid #efefed}
 #content h1>a.anchor,h2>a.anchor,h3>a.anchor,#toctitle>a.anchor,.sidebarblock>.content>.title>a.anchor,h4>a.anchor,h5>a.anchor,h6>a.anchor{position:absolute;z-index:1001;width:1.5ex;margin-left:-1.5ex;display:block;text-decoration:none!important;visibility:hidden;text-align:center;font-weight:400}
 #content h1>a.anchor:before,h2>a.anchor:before,h3>a.anchor:before,#toctitle>a.anchor:before,.sidebarblock>.content>.title>a.anchor:before,h4>a.anchor:before,h5>a.anchor:before,h6>a.anchor:before{content:"\00A7";font-size:.85em;display:block;padding-top:.1em}
 #content h1:hover>a.anchor,#content h1>a.anchor:hover,h2:hover>a.anchor,h2>a.anchor:hover,h3:hover>a.anchor,#toctitle:hover>a.anchor,.sidebarblock>.content>.title:hover>a.anchor,h3>a.anchor:hover,#toctitle>a.anchor:hover,.sidebarblock>.content>.title>a.anchor:hover,h4:hover>a.anchor,h4>a.anchor:hover,h5:hover>a.anchor,h5>a.anchor:hover,h6:hover>a.anchor,h6>a.anchor:hover{visibility:visible}
@@ -190,7 +201,7 @@ table.tableblock>caption.title{white-space:nowrap;overflow:visible;max-width:0}
 table.tableblock #preamble>.sectionbody>.paragraph:first-of-type p{font-size:inherit}
 .admonitionblock>table{border-collapse:separate;border:0;background:none;width:100%}
 .admonitionblock>table td.icon{text-align:center;width:80px}
-.admonitionblock>table td.icon img{max-width:none}
+.admonitionblock>table td.icon img{max-width:initial}
 .admonitionblock>table td.icon .title{font-weight:bold;font-family:"Open Sans","DejaVu Sans",sans-serif;text-transform:uppercase}
 .admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #ddddd8;color:rgba(0,0,0,.6)}
 .admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
@@ -206,7 +217,9 @@ table.tableblock #preamble>.sectionbody>.paragraph:first-of-type p{font-size:inh
 .sidebarblock .literalblock pre,.sidebarblock .listingblock pre:not(.highlight),.sidebarblock .listingblock pre[class="highlight"],.sidebarblock .listingblock pre[class^="highlight "],.sidebarblock .listingblock pre.CodeRay,.sidebarblock .listingblock pre.prettyprint{background:#f2f1f1}
 .literalblock pre,.literalblock pre[class],.listingblock pre,.listingblock pre[class]{-webkit-border-radius:4px;border-radius:4px;word-wrap:break-word;padding:1em;font-size:.8125em}
 .literalblock pre.nowrap,.literalblock pre[class].nowrap,.listingblock pre.nowrap,.listingblock pre[class].nowrap{overflow-x:auto;white-space:pre;word-wrap:normal}
-@media only screen and (min-width:768px){.literalblock pre,.literalblock pre[class],.listingblock pre,.listingblock pre[class]{font-size:.90625em}}@media only screen and (min-width:1280px){.literalblock pre,.literalblock pre[class],.listingblock pre,.listingblock pre[class]{font-size:1em}}.literalblock.output pre{color:#f7f7f8;background-color:rgba(0,0,0,.9)}
+@media only screen and (min-width:768px){.literalblock pre,.literalblock pre[class],.listingblock pre,.listingblock pre[class]{font-size:.90625em}}
+@media only screen and (min-width:1280px){.literalblock pre,.literalblock pre[class],.listingblock pre,.listingblock pre[class]{font-size:1em}}
+.literalblock.output pre{color:#f7f7f8;background-color:rgba(0,0,0,.9)}
 .listingblock pre.highlightjs{padding:0}
 .listingblock pre.highlightjs>code{padding:1em;-webkit-border-radius:4px;border-radius:4px}
 .listingblock pre.prettyprint{border-width:0}
@@ -216,7 +229,7 @@ table.tableblock #preamble>.sectionbody>.paragraph:first-of-type p{font-size:inh
 .listingblock.terminal pre .command:before{content:attr(data-prompt);padding-right:.5em;color:#999}
 .listingblock.terminal pre .command:not([data-prompt]):before{content:"$"}
 table.pyhltable{border-collapse:separate;border:0;margin-bottom:0;background:none}
-table.pyhltable td{vertical-align:top;padding-top:0;padding-bottom:0}
+table.pyhltable td{vertical-align:top;padding-top:0;padding-bottom:0;line-height:1.45}
 table.pyhltable td.code{padding-left:.75em;padding-right:0}
 pre.pygments .lineno,table.pyhltable td:not(.code){color:#999;padding-left:0;padding-right:.5em;border-right:1px solid #ddddd8}
 pre.pygments .lineno{display:inline-block;margin-right:.25em}
@@ -237,21 +250,20 @@ table.pyhltable .linenodiv{background:none!important;padding-right:0!important}
 .verseblock .attribution{margin-top:1.25rem;margin-left:.5ex}
 .quoteblock .attribution,.verseblock .attribution{font-size:.9375em;line-height:1.45;font-style:italic}
 .quoteblock .attribution br,.verseblock .attribution br{display:none}
-.quoteblock .attribution cite,.verseblock .attribution cite{display:block;letter-spacing:-.05em;color:rgba(0,0,0,.6)}
+.quoteblock .attribution cite,.verseblock .attribution cite{display:block;letter-spacing:-.025em;color:rgba(0,0,0,.6)}
 .quoteblock.abstract{margin:0 0 1.25em 0;display:block}
 .quoteblock.abstract blockquote,.quoteblock.abstract blockquote p{text-align:left;word-spacing:0}
 .quoteblock.abstract blockquote:before,.quoteblock.abstract blockquote p:first-of-type:before{display:none}
 table.tableblock{max-width:100%;border-collapse:separate}
 table.tableblock td>.paragraph:last-child p>p:last-child,table.tableblock th>p:last-child,table.tableblock td>p:last-child{margin-bottom:0}
-table.spread{width:100%}
 table.tableblock,th.tableblock,td.tableblock{border:0 solid #dedede}
-table.grid-all th.tableblock,table.grid-all td.tableblock{border-width:0 1px 1px 0}
-table.grid-all tfoot>tr>th.tableblock,table.grid-all tfoot>tr>td.tableblock{border-width:1px 1px 0 0}
-table.grid-cols th.tableblock,table.grid-cols td.tableblock{border-width:0 1px 0 0}
-table.grid-all *>tr>.tableblock:last-child,table.grid-cols *>tr>.tableblock:last-child{border-right-width:0}
-table.grid-rows th.tableblock,table.grid-rows td.tableblock{border-width:0 0 1px 0}
-table.grid-all tbody>tr:last-child>th.tableblock,table.grid-all tbody>tr:last-child>td.tableblock,table.grid-all thead:last-child>tr>th.tableblock,table.grid-rows tbody>tr:last-child>th.tableblock,table.grid-rows tbody>tr:last-child>td.tableblock,table.grid-rows thead:last-child>tr>th.tableblock{border-bottom-width:0}
-table.grid-rows tfoot>tr>th.tableblock,table.grid-rows tfoot>tr>td.tableblock{border-width:1px 0 0 0}
+table.grid-all>thead>tr>.tableblock,table.grid-all>tbody>tr>.tableblock{border-width:0 1px 1px 0}
+table.grid-all>tfoot>tr>.tableblock{border-width:1px 1px 0 0}
+table.grid-cols>*>tr>.tableblock{border-width:0 1px 0 0}
+table.grid-rows>thead>tr>.tableblock,table.grid-rows>tbody>tr>.tableblock{border-width:0 0 1px 0}
+table.grid-rows>tfoot>tr>.tableblock{border-width:1px 0 0 0}
+table.grid-all>*>tr>.tableblock:last-child,table.grid-cols>*>tr>.tableblock:last-child{border-right-width:0}
+table.grid-all>tbody>tr:last-child>.tableblock,table.grid-all>thead:last-child>tr>.tableblock,table.grid-rows>tbody>tr:last-child>.tableblock,table.grid-rows>thead:last-child>tr>.tableblock{border-bottom-width:0}
 table.frame-all{border-width:1px}
 table.frame-sides{border-width:0 1px}
 table.frame-topbot{border-width:1px 0}
@@ -272,10 +284,12 @@ ul li ol{margin-left:1.5em}
 dl dd{margin-left:1.125em}
 dl dd:last-child,dl dd:last-child>:last-child{margin-bottom:0}
 ol>li p,ul>li p,ul dd,ol dd,.olist .olist,.ulist .ulist,.ulist .olist,.olist .ulist{margin-bottom:.625em}
-ul.unstyled,ol.unnumbered,ul.checklist,ul.none{list-style-type:none}
-ul.unstyled,ol.unnumbered,ul.checklist{margin-left:.625em}
-ul.checklist li>p:first-child>.fa-square-o:first-child,ul.checklist li>p:first-child>.fa-check-square-o:first-child{width:1em;font-size:.85em}
-ul.checklist li>p:first-child>input[type="checkbox"]:first-child{width:1em;position:relative;top:1px}
+ul.checklist,ul.none,ol.none,ul.no-bullet,ol.no-bullet,ol.unnumbered,ul.unstyled,ol.unstyled{list-style-type:none}
+ul.no-bullet,ol.no-bullet,ol.unnumbered{margin-left:.625em}
+ul.unstyled,ol.unstyled{margin-left:0}
+ul.checklist{margin-left:.625em}
+ul.checklist li>p:first-child>.fa-square-o:first-child,ul.checklist li>p:first-child>.fa-check-square-o:first-child{width:1.25em;font-size:.8em;position:relative;bottom:.125em}
+ul.checklist li>p:first-child>input[type="checkbox"]:first-child{margin-right:.25em}
 ul.inline{margin:0 auto .625em auto;margin-left:-1.375em;margin-right:0;padding:0;list-style:none;overflow:hidden}
 ul.inline>li{list-style:none;float:left;margin-left:1.375em;display:block}
 ul.inline>li>*{display:block}
@@ -289,10 +303,11 @@ ol.upperroman{list-style-type:upper-roman}
 ol.lowergreek{list-style-type:lower-greek}
 .hdlist>table,.colist>table{border:0;background:none}
 .hdlist>table>tbody>tr,.colist>table>tbody>tr{background:none}
-td.hdlist1{padding-right:.75em;font-weight:bold}
-td.hdlist1,td.hdlist2{vertical-align:top}
+td.hdlist1,td.hdlist2{vertical-align:top;padding:0 .625em}
+td.hdlist1{font-weight:bold;padding-bottom:1.25em}
 .literalblock+.colist,.listingblock+.colist{margin-top:-.5em}
-.colist>table tr>td:first-of-type{padding:0 .75em;line-height:1}
+.colist>table tr>td:first-of-type{padding:.4em .75em 0 .75em;line-height:1;vertical-align:top}
+.colist>table tr>td:first-of-type img{max-width:initial}
 .colist>table tr>td:last-of-type{padding:.25em 0}
 .thumb,.th{line-height:0;display:inline-block;border:solid 4px #fff;-webkit-box-shadow:0 0 0 1px #ddd;box-shadow:0 0 0 1px #ddd}
 .imageblock.left,.imageblock[style*="float: left"]{margin:.25em .625em 1.25em 0}
@@ -303,13 +318,14 @@ td.hdlist1,td.hdlist2{vertical-align:top}
 .image.left,.image.right{margin-top:.25em;margin-bottom:.25em;display:inline-block;line-height:0}
 .image.left{margin-right:.625em}
 .image.right{margin-left:.625em}
-a.image{text-decoration:none}
-span.footnote,span.footnoteref{vertical-align:super;font-size:.875em}
-span.footnote a,span.footnoteref a{text-decoration:none}
-span.footnote a:active,span.footnoteref a:active{text-decoration:underline}
+a.image{text-decoration:none;display:inline-block}
+a.image object{pointer-events:none}
+sup.footnote,sup.footnoteref{font-size:.875em;position:static;vertical-align:super}
+sup.footnote a,sup.footnoteref a{text-decoration:none}
+sup.footnote a:active,sup.footnoteref a:active{text-decoration:underline}
 #footnotes{padding-top:.75em;padding-bottom:.75em;margin-bottom:.625em}
 #footnotes hr{width:20%;min-width:6.25em;margin:-.25em 0 .75em 0;border-width:1px 0 0 0}
-#footnotes .footnote{padding:0 .375em;line-height:1.3;font-size:.875em;margin-left:1.2em;text-indent:-1.2em;margin-bottom:.2em}
+#footnotes .footnote{padding:0 .375em 0 .225em;line-height:1.3334;font-size:.875em;margin-left:1.2em;text-indent:-1.05em;margin-bottom:.2em}
 #footnotes .footnote a:first-of-type{font-weight:bold;text-decoration:none}
 #footnotes .footnote:last-of-type{margin-bottom:0}
 #content #footnotes{margin-top:-.625em;margin-bottom:0;padding:.75em 0}
@@ -354,6 +370,7 @@ div.unbreakable{page-break-inside:avoid}
 .yellow{color:#bfbf00}
 .yellow-background{background-color:#fafa00}
 span.icon>.fa{cursor:default}
+a span.icon>.fa{cursor:inherit}
 .admonitionblock td.icon [class^="fa icon-"]{font-size:2.5em;text-shadow:1px 1px 2px rgba(0,0,0,.5);cursor:default}
 .admonitionblock td.icon .icon-note:before{content:"\f05a";color:#19407c}
 .admonitionblock td.icon .icon-tip:before{content:"\f0eb";text-shadow:1px 1px 2px rgba(155,155,0,.8);color:#111}
@@ -367,11 +384,10 @@ span.icon>.fa{cursor:default}
 pre .conum[data-value]{position:relative;top:-.125em}
 b.conum *{color:inherit!important}
 .conum:not([data-value]):empty{display:none}
-h1,h2{letter-spacing:-.01em}
-dt,th.tableblock,td.content{text-rendering:optimizeLegibility}
-p,td.content{letter-spacing:-.01em}
-p strong,td.content strong{letter-spacing:-.005em}
-p,blockquote,dt,td.content{font-size:1.0625rem}
+dt,th.tableblock,td.content,div.footnote{text-rendering:optimizeLegibility}
+h1,h2,p,td.content,span.alt{letter-spacing:-.01em}
+p strong,td.content strong,div.footnote strong{letter-spacing:-.005em}
+p,blockquote,dt,td.content,span.alt{font-size:1.0625rem}
 p{margin-bottom:1.25rem}
 .sidebarblock p,.sidebarblock dt,.sidebarblock td.content,p.tableblock{font-size:1em}
 .exampleblock>.content{background-color:#fffef7;border-color:#e0e0dc;-webkit-box-shadow:0 1px 4px #e0e0dc;box-shadow:0 1px 4px #e0e0dc}
@@ -382,9 +398,9 @@ a{color:inherit!important;text-decoration:underline!important}
 a.bare,a[href^="#"],a[href^="mailto:"]{text-decoration:none!important}
 a[href^="http:"]:not(.bare):after,a[href^="https:"]:not(.bare):after{content:"(" attr(href) ")";display:inline-block;font-size:.875em;padding-left:.25em}
 abbr[title]:after{content:" (" attr(title) ")"}
-pre,blockquote,tr,img{page-break-inside:avoid}
+pre,blockquote,tr,img,object,svg{page-break-inside:avoid}
 thead{display:table-header-group}
-img{max-width:100%!important}
+svg{max-width:100%}
 p,blockquote,dt,td.content{font-size:1em;orphans:3;widows:3}
 h2,h3,#toctitle,.sidebarblock>.content>.title{page-break-after:avoid}
 #toc,.sidebarblock,.exampleblock>.content{background:none!important}
@@ -520,7 +536,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Click on <strong><span class="red">Add step</span></strong> to display the following window.  <span class="image" style="float: right"><img src="images/testcasepage.PNG" alt="TestCasePage" width="250" height="250"></span></p>
+<p>Click on <strong><span class="red">Add step</span></strong> to display the following window.  <span class="image" style="float: right"><img src="images/testcasepage.png" alt="TestCasePage" width="250" height="250"></span></p>
 </li>
 <li>
 <p>Feed a <strong><span class="red">Description</span></strong> and click on <strong><span class="red">Add</span></strong> for a new step.</p>
@@ -570,9 +586,9 @@ You have the possibility to switch the position of your steps by clicking on the
 <h4 id="_action">Action</h4>
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
-<col style="width: 33%;">
-<col style="width: 33%;">
-<col style="width: 33%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
 </colgroup>
 <tbody>
 <tr>
@@ -587,7 +603,7 @@ You have the possibility to switch the position of your steps by clicking on the
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">keypress</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">will allow you to press any key in the current web page. <strong><span class="red">Value1</span></strong>	: Keycode of the key to press Example : ENTER</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">will allow you to press any key in the current web page. <strong><span class="red">Value1</span></strong> : Location of the element from which press the key. <strong><span class="red">Value2</span></strong> : Keycode of the key to press Example : ENTER</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
@@ -639,9 +655,9 @@ You have the possibility to switch the position of your steps by clicking on the
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Switchtowindow</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">TBD</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">switchToWindow</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">When the Test case need to switch to another window (like popup dialog) this action is used. Just specify the title or the URL of the other window to switch to this window.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">title=titleOfThisNewWindow or url=http://url_of_this_new_window</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">manageDialog</p></td>
@@ -731,9 +747,9 @@ You have the possibility to switch the position of your steps by clicking on the
 <h4 id="_control">Control</h4>
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
-<col style="width: 33%;">
-<col style="width: 33%;">
-<col style="width: 33%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
 </colgroup>
 <tbody>
 <tr>
@@ -965,45 +981,122 @@ From there you can :</p>
 <div class="sect3">
 <h4 id="_variables">Variables</h4>
 <div class="paragraph">
-<p>You can use variables in the action and control&#8217;s values.
-These variable are define in cerberus and you can have access to them with the right syntax.</p>
+<p>You can use variables in many area of Cerberus. Those variable are used in order to perform some actions of controls in a dynamic way.
+3 types of variables can be created :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Variables defined from <strong>properties</strong> inside Test Cases.</p>
+</li>
+<li>
+<p>Variables defined from <strong>application object</strong>.</p>
+</li>
+<li>
+<p><strong>System</strong> Variables</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>A variable is defined between %</p>
+<p>Properties and Application Object are defined by the users while system variable are provided by Cerberus.</p>
 </div>
 <div class="paragraph">
-<p>The easiest way to feed an action with a property or an object, is to use the auto-completion :</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p><strong><span class="red">Create</span></strong> your <strong>property</strong> or your <strong>application object <span class="red">in advance</span></strong></p>
-</li>
-<li>
-<p><strong><span class="red">Type</span></strong> "%"</p>
-</li>
-<li>
-<p><strong><span class="red">Select</span></strong> property or object</p>
-</li>
-<li>
-<p><strong><span class="red">Select</span></strong> property-name or object-name</p>
-</li>
-<li>
-<p>If it&#8217;s an object, <strong><span class="red">select</span></strong> its value / picture path / picture url</p>
-</li>
-</ol>
+<p>The global syntax of a variable is :
+%[property|object|system].nameOfTheVariable%</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="images/testcasevariables.png" alt="testCaseVariables"></span></p>
+<p>This is the list of fields in Cerberus where you can use those variables.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Condition Value1 and Value2 at Test Case level.</p>
+</li>
+<li>
+<p>Condition Value1 and Value2 at Step Test Case level.</p>
+</li>
+<li>
+<p>Condition Value1 and Value2 at Action Test Case level.</p>
+</li>
+<li>
+<p>Condition Value1 and Value2 at Control Test Case level.</p>
+</li>
+<li>
+<p>Test Case Action Value 1 and Value 2.</p>
+</li>
+<li>
+<p>Test Case Control Value 1 and Value 2.</p>
+</li>
+<li>
+<p>Test Case Properties Value 1 and Value 2.</p>
+</li>
+<li>
+<p>Path, Envelope and Method at Test Data Library (SOAP) level.</p>
+</li>
+<li>
+<p>SQL Script at Test Data Library (SQL) level</p>
+</li>
+<li>
+<p>Column, Parsing Answer and Column Position at Test Data Library Subdata definition level</p>
+</li>
+<li>
+<p>Path, Request, Operation and Attachement URL at Service level.</p>
+</li>
+<li>
+<p>Request detail (all keys and values) and Header (all keys and values) at Service level.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>These syntax are available:</p>
+<p>When a variable is detected in one of those field, Cerberus will replace it by the value during the execution.</p>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
+<div class="ulist">
+<ul>
 <li>
-<p>%property.myproperty% : Get the property myproperty</p>
+<p>If the variable is an object, the value (that never change) is just replaced.</p>
 </li>
+<li>
+<p>If the variable is a system variable, the value is calculated and replaced at the same time (for ex : time will be the time of the replacement).</p>
+</li>
+<li>
+<p>If the variable is a property, it gets automatically calculated at the time of the replacement. If was already calculated before, the same value (already calculated) is replaced.
+NOTE: In order to force the calculation of a property at a certain timing, <em>calculateProperty</em> Action can be inserted just before the action is used in a field.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Variables can be defined in a recursive way.
+That means that the following syntax :</p>
+</div>
+<div class="paragraph">
+<p>%property.%system.country%% will be first replaced by</p>
+</div>
+<div class="paragraph">
+<p>%property.FR% and then by FR property value (if it exist).</p>
+</div>
+<div class="paragraph">
+<p>Please note also that, if at the end of the decode operation, there are still references to %property.???% or %system.???% or %object.%%% in the field, the corresponding test case will report an error and generate an FA status.</p>
+</div>
+<div class="sect4">
+<h5 id="_property_variables">Property Variables</h5>
+<div class="paragraph">
+<p>Property variable allow to have multi row content.
+As a consequence the full syntax will look like this :</p>
+</div>
+<div class="paragraph">
+<p>%property.NameOfTheVariable.rowNb.SubData%</p>
+</div>
+<div class="paragraph">
+<p>If rowNb is not defined, the 1st row will be used. As a consequence, the syntax %property.rowNb.nameOfTheVariable% is the same as %property.1.nameOfTheVariable%</p>
+</div>
+<div class="paragraph">
+<p>If SubData is not defined, the key velue subdata will be used.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_object_variables">Object Variables</h5>
+<div class="ulist">
+<ul>
 <li>
 <p>%object.myobject.value% : Get the application object myobject&#8217;s value</p>
 </li>
@@ -1013,10 +1106,13 @@ These variable are define in cerberus and you can have access to them with the r
 <li>
 <p>%object.myobject.pictureurl% : Get the application object myobject&#8217;s picure url</p>
 </li>
-</ol>
+</ul>
 </div>
+</div>
+<div class="sect4">
+<h5 id="_system_variables">System Variables</h5>
 <div class="paragraph">
-<p>Below you will find usefull properties :</p>
+<p>Below you will find useful properties :</p>
 </div>
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
@@ -1029,155 +1125,214 @@ These variable are define in cerberus and you can have access to them with the r
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Description</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_SYSTEM%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.SYSTEM%</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">System value</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_APPLI%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.APPLI%</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Application reference</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_APP_DOMAIN%</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Domain of the Application</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_APP_VAR1%</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">VAR1 of the application on the environment.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_APP_VAR2%</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">VAR2 of the application on the environment.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_APP_VAR3%</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">VAR3 of the application on the environment.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_APP_VAR4%</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">VAR4 of the application on the environment.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_ENV%</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Environment value</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_ENVGP%</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Environment group code</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_COUNTRY%</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Country code</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_TEST%</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Test.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_TESTCASE%</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">TestCase</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_COUNTRYGP1%</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Country group1 value</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_SSIP%</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Selenium server IP</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_SSPORT%</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Selenium server port</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_BROWSER%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.BROWSER%</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Browser name of the current execution.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_TAG%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.APP_DOMAIN%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Domain of the Application</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.APP_HOST%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Host of the tested Application</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.APP_VAR1%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">VAR1 of the application on the environment.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.APP_VAR2%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">VAR2 of the application on the environment.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.APP_VAR3%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">VAR3 of the application on the environment.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.APP_VAR4%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">VAR4 of the application on the environment.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.ENV%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Environment value</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.ENVGP%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Environment group code</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.COUNTRY%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Country code</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.COUNTRYGP1%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Country group1 value</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.COUNTRYGP2%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Country group2 value</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.COUNTRYGP3%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Country group3 value</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.COUNTRYGP4%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Country group4 value</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.COUNTRYGP5%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Country group5 value</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.COUNTRYGP6%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Country group6 value</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.COUNTRYGP7%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Country group7 value</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.COUNTRYGP8%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Country group8 value</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.COUNTRYGP9%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Country group9 value</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.TEST%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Test.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.TESTCASE%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TestCase</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.SSIP%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Selenium server IP</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.SSPORT%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Selenium server port</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.TAG%</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Execution tag</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_EXECUTIONID%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.EXECUTIONID%</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Execution ID</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_EXESTART%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.EXESTART%</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Start date and time of the execution with format : 2016-12-31 21:24:53.008.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_EXESTORAGEURL%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.EXESTORAGEURL%</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Path where media are stored (based from the exeid).</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_STEP.n.RETURNCODE%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.EXEELAPSEDMS%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Elapsed time in ms since the beginning of the execution (can be used to perform timing controls).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.CURRENTSTEP_INDEX%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Index number of the current step execution. Can be used when looping over a step.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.CURRENTSTEP_STARTISO%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ISO Timestamp of the beginning of the step execution.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.CURRENTSTEP_ELAPSEDMS%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Elapsed time in ms since the beginning of the current step execution (can be used to perform timing controls).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.STEP.n.RETURNCODE%</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Return Code of the step n. n being the execution sequence of the step (sort).</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_TODAY-yyyy%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.LASTSERVICE_HTTPCODE%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Http return code of the last service called.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.TODAY-yyyy%</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Year of today</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_TODAY-MM%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.TODAY-MM%</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Month of today</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_TODAY-dd%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.TODAY-dd%</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Day of today</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_TODAY-doy%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.TODAY-doy%</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Day of today from the beginning of the year</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_TODAY-HH%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.TODAY-HH%</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Hour of today</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_TODAY-mm%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.TODAY-mm%</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Minute of today</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_TODAY-ss%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.TODAY-ss%</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Second of today</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_YESTERDAY-yyyy%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.YESTERDAY-yyyy%</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Year of yesterday</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_YESTERDAY-MM%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.YESTERDAY-MM%</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Month of yesterday</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_YESTERDAY-dd%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.YESTERDAY-dd%</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Day of yesterday</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_TODAY-doy%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.TODAY-doy%</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Day of yesterday from the beginning of the year</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_YESTERDAY-HH%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.YESTERDAY-HH%</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Hour of yesterday</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_YESTERDAY-mm%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.YESTERDAY-mm%</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Minute of yesterday</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_YESTERDAY-ss%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.YESTERDAY-ss%</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Second of yesterday</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_ELAPSED-EXESTART%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.ELAPSED-EXESTART%</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Number of milisecond since the start of the execution.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">%SYS_ELAPSED-STEPSTART%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.ELAPSED-STEPSTART%</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Number of milisecond since the start of the execution of the current step.</p></td>
 </tr>
 </tbody>
 </table>
+</div>
+<div class="sect4">
+<h5 id="_tricks">Tricks</h5>
 <div class="paragraph">
 <p>You will find below some tricks which help you to implement specific test cases.</p>
 </div>
@@ -1189,17 +1344,110 @@ These variable are define in cerberus and you can have access to them with the r
 </td>
 <td class="content">
 It is possible to create a random property with a number of digit defined. You have to feed the property fields like the screenshot below. This property will be different for each execution. Example: 884592, 004795
-<span class="image"><img src="images/testcaserandomproperty.PNG" alt="TestCaseRandomProperty"></span>
+<span class="image"><img src="images/testcaserandomproperty.png" alt="TestCaseRandomProperty"></span>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+It is possible to loop over a step using the following configuration.
+<span class="image"><img src="images/testlooptep.png" alt="TestCaseLoopStep"></span>
 </td>
 </tr>
 </table>
 </div>
 </div>
 </div>
+<div class="sect3">
+<h4 id="_robot_constrains">Robot Constrains</h4>
+<div class="paragraph">
+<p>You can define Robot constrains at testcase level in order to force the execution a specific testcase with a specific UserAgent or ScreenSize.
+This is used to test some specific behaviour of a website for a given UserAgent or ScreenSize.
+You can tune the list of UserAgent and ScreenSize proposed in autocomplete mode (on the GUI) by modifying the respective public invariant USERAGENT and SCREENSIZE.</p>
+</div>
+<div class="paragraph">
+<p>UserAgent and ScreenSize will be defined at execution level following the rule :</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>TestCase</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Robot / Execution</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>UserAgent Result</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UserAgent1</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UserAgent1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UserAgent2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UserAgent2</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">user Agent unchanged</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UserAgent1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UserAgent2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UserAgent1</p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>TestCase</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Robot / Execution</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ScreenSize Result</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1024*768</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1024*768</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">640*360</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">640*360</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fullscreen</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1024*768</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">640*360</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1024*768</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-01-09 10:53:31 +01:00
+Last updated 2017-09-29 21:25:44 CEST
 </div>
 </div>
 </body>
