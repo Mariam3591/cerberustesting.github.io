@@ -515,22 +515,22 @@ If you forgot your password, you can retrieve it following the forgot password w
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Application</strong> : Technical component</p>
+<p><strong>System</strong> : Business Application or CI (Configuration Item)</p>
 </li>
 <li>
-<p><strong>Battery</strong> : Group of TestCase to be executed together. This feature should be replaced by labels soon.</p>
+<p><strong>Application</strong> : Technical component. Applications are linked to a single System.</p>
 </li>
 <li>
-<p><strong>Campaign</strong> : One or several batteries with execution parameters (country - environment - browser). Can also be created with labels instead of batteries.</p>
+<p><strong>Battery</strong> : (obsolete since 3.0 release) Group of TestCase to be executed together.</p>
 </li>
 <li>
-<p><strong>TestCase</strong> : Test scénario made of steps, actions and controls. (User story)</p>
+<p><strong>Campaign</strong> : Group of testcases (selected using labels) all linked to execution parameters (country - environment - browser - robot (optionnal)). Batteries were used instead of labels in release before 3.0</p>
+</li>
+<li>
+<p><strong>TestCase</strong> : Test scénario made of steps, actions and controls. (User story implementation in Cerberus)</p>
 </li>
 <li>
 <p><strong>Label</strong> : Mark to describe TestCases, so you can group and filter easily.</p>
-</li>
-<li>
-<p><strong>System</strong> : Business Application ou CI</p>
 </li>
 <li>
 <p><strong>Test</strong> : Group of TestCases, Test is also considered as an application function. Executions can be sorted by Test.</p>
@@ -539,21 +539,21 @@ If you forgot your password, you can retrieve it following the forgot password w
 </div>
 </div>
 <div class="sect3">
-<h4 id="_représentation">Représentation</h4>
+<h4 id="_representation">Representation</h4>
 <div class="paragraph">
-<p>You will find in this section a grphical representation of the main Cerberus elements.</p>
+<p>You will find in this section a graphical representation of the main Cerberus elements.</p>
 </div>
 <div class="paragraph">
 <p>Below the system :</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="images/systemillustration.png" alt="SystemIllustration"></span></p>
+<p><span class="image"><img src="images/systemillustration.PNG" alt="SystemIllustration"></span></p>
 </div>
 <div class="paragraph">
 <p>Below the test case :</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="images/testcaseillustration.png" alt="TestCaseIllustration"></span></p>
+<p><span class="image"><img src="images/testcaseillustration.PNG" alt="TestCaseIllustration"></span></p>
 </div>
 </div>
 <div class="sect3">
@@ -718,7 +718,7 @@ To see execution step by step parameter Synchroneous to N.
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-10-31 22:54:35 CET
+Last updated 2018-05-06 09:26:54 CEST
 </div>
 </div>
 </body>

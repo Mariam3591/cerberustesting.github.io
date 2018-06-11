@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.6.1">
-<title>Untitled</title>
+<title>Introduction</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -429,26 +429,194 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="header">
 </div>
 <div id="content">
-<div id="preamble">
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_introduction">Introduction</h3>
 <div class="paragraph">
-<p>In this section, you will find information on test execution in Cerberus.</p>
+<p>The run options are accessible using the menu Run &gt; Run Test Case</p>
 </div>
+<div class="paragraph">
+<p><span class="image"><img src="images/runtestcasemenubutton.png" alt="RunTestCaseMenu"></span></p>
+</div>
+<div class="paragraph">
+<p>The different sections let the user select the test case(s) to launch and choose its execution parameters.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Selection type</p>
+</li>
+<li>
+<p>Environment &amp; Country</p>
+</li>
+<li>
+<p>Robot settings</p>
+</li>
+<li>
+<p>Execution settings</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_selection_type">Selection Type</h3>
 <div class="paragraph">
 <p><span class="image"><img src="images/runtestselection.png" alt="RunTestSelection"></span></p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="images/runrobotsettings.png" alt="RunRobotSettings" width="500" height="500"></span></p>
+<p>Manual selection let the user select one or several test cases using the filters.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="images/runexecutionsettings.png" alt="RunExecutionSettings" width="500" height="500"></span></p>
+<p><span class="image"><img src="images/extendedtestcasefilters.png" alt="ExtendedTestCaseFilters"></span></p>
 </div>
+<div class="paragraph">
+<p>Campaign selection let the user select a campaign from a dropdown menu. Clicking 'load' button display the selected test cases in the section below.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/campaignselection.png" alt="CampaignSelection"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_environment_country">Environment &amp; Country</h3>
+<div class="paragraph">
+<p>For manual selection, no country and environment are selected.</p>
+</div>
+<div class="paragraph">
+<p>For campaign selection, some environments and countries can be checked if they are configured in the Test Campaigns</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/envcountries.png" alt="EnvironmentCountries"></span></p>
+</div>
+<div class="paragraph">
+<p>Warning: the environment and countries must be configured for the related applications. Besides, the testcase attributes override the configuration (e.g. Active in PROD)</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_robots_settings">Robots settings</h3>
+<div class="paragraph">
+<p><span class="image"><img src="images/runrobotsettings.png" alt="RunRobotSettings"></span></p>
+</div>
+<div class="paragraph">
+<p>The robots settings can be linked to a campaign. If so, the robot(s) will be automatically selected when the corresponding campaign is loaded.</p>
+</div>
+<div class="paragraph">
+<p>However, if the user changes this value, it will be overriden by his selection.</p>
+</div>
+<div class="paragraph">
+<p>'Save Robot Preferencies' button save these settings in the browser cache of the device.</p>
+</div>
+<div class="paragraph">
+<p>The selected robot can be edited using the left button. A new robot can be created using the right one.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_execution_settings">Execution settings</h3>
+<div class="paragraph">
+<p><span class="image"><img src="images/runexecutionsettings.png" alt="RunExecutionSettings"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Tag : regroup all the execution in the same tag. It help identify this execution for reporting sake. If no value, the tag will be a timestamp.</p>
+</li>
+<li>
+<p>Screenshot : define if screenshots have to be taken and the frequency.</p>
+</li>
+<li>
+<p>Timeout : define the maximum time (in ms) to spent in an action or control. Correspond to the time Cerberus will wait until it consider that a field or object is not available.</p>
+</li>
+<li>
+<p>Retries : Defined the number of retries for each test cases. A retry is a re submission of a testcase (in the queue) if its status is different from OK.</p>
+</li>
+<li>
+<p>Priority : define the priority for all the test cases (reminder: the lowest (=0) the most important). Default value is 1000. Tips: Use 0 priority only when relaunching manually a test case.</p>
+</li>
+<li>
+<p>Manual Execution : define the test case execution type: Y : manual, N : Automatic, A : Automaticly determined from test case. default value is 'N'</p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Execution parameter \ Test Case Group</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>AUTOMATED</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>MANUAL</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>PRIVATE</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Automated execution</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Automated execution</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Automated execution</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Manual execution</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Manual execution</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Manual execution</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Automated execution</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Manual Execution</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Automated execution</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_execution_result_status">Execution result status</h3>
+<div class="paragraph">
+<p><span class="image"><img src="images/executionstatus.png" alt="ExecutionStatus"></span></p>
+</div>
+<div class="paragraph">
+<p>Here is a summary of all execution status with their corresponding meanings.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>OK : The execution was performed correctly and all controls were OK.</p>
+</li>
+<li>
+<p>KO : The execution was performed correcly and at least one control failed resulting a global KO. That means that a bug needs to be reported to development teams.</p>
+</li>
+<li>
+<p>FA : The execution did not performed correctly and needs a correction from the team that is in charge of managing the testcases. It couls be a failed SQL or action during the test.</p>
+</li>
+<li>
+<p>NA : Test could not be executed as a data could not be retreived. That probably means that the test is not possible in the current environment/status.</p>
+</li>
+<li>
+<p>NE : Test Case was not executed (following a condition execution).</p>
+</li>
+<li>
+<p>WE : Test Case was not yet executed (waiting a manual execution).</p>
+</li>
+<li>
+<p>PE : Test Case is currently running.</p>
+</li>
+<li>
+<p>QU : Test Case is still waiting in the queue for ressources or constrains to be released.</p>
+</li>
+<li>
+<p>QE : Test Case failed in the queue and will not be triggered.</p>
+</li>
+<li>
+<p>CA : Test Case has been cancelled by user.</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-09-29 21:25:43 CEST
+Last updated 2018-05-29 21:18:08 CEST
 </div>
 </div>
 </body>

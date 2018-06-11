@@ -429,13 +429,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="header">
 </div>
 <div id="content">
-<div id="preamble">
-<div class="sectionbody">
-<div class="paragraph">
-<p>La page d&#8217;execution est découpée en trois parties.</p>
-</div>
-</div>
-</div>
 <div class="sect2">
 <h3 id="_selection_du_périmètre_à_executer">Selection du périmètre à executer</h3>
 <div class="paragraph">
@@ -485,43 +478,110 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="paragraph">
 <p><span class="image"><img src="images/runexecutionsettings.png" alt="RunExecutionSettings" width="500" height="500"></span></p>
 </div>
+<div class="ulist">
+<ul>
+<li>
+<p>Tag : regroup all the execution in the same tag. It help identify this execution for reporting sake. If no value, the tag will be a timestamp.</p>
+</li>
+<li>
+<p>Screenshot : define if screenshots have to be taken and the frequency.</p>
+</li>
+<li>
+<p>Timeout : define the maximum time (in ms) to spent in an action or control. Correspond to the time Cerberus will wait until it consider that a field or object is not available.</p>
+</li>
+<li>
+<p>Retries : Defined the number of retries for each test cases. A retry is a re submission of a testcase (in the queue) if its status is different from OK.</p>
+</li>
+<li>
+<p>Priority : define the priority for all the test cases (reminder: the lowest (=0) the most important). Default value is 1000. Tips: Use 0 priority only when relaunching manually a test case.</p>
+</li>
+<li>
+<p>Manual Execution : define the test case execution type: Y : manual, N : Automatic, A : Automaticly determined from test case. default value is 'N'</p>
+</li>
+</ul>
+</div>
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Field</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Description</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Execution parameter \ Test Case Group</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>AUTOMATED</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>MANUAL</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>PRIVATE</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Select Robot Config</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Permet de charger la configuration d&#8217;un robot, ou de selectionner la personalisation d&#8217;un robot.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Automated execution</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Automated execution</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Automated execution</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Selenium Server IP</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Cell in column 2, row 3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Manual execution</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Manual execution</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Manual execution</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Selenium Server Port</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Cell in column 2, row 3</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Browser</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Le ou les navigateurs sur lesquel les cas de tests seront lancé.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Version</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">This correspond to the URL that points to the page where a new bug can be created on the Bug system of the application. More detail in the <a href="#New Bug URL">[New Bug URL]</a> section.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Automated execution</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Manual Execution</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Automated execution</p></td>
 </tr>
 </tbody>
 </table>
 </div>
+<div class="sect2">
+<h3 id="_execution_result_status">Execution result status</h3>
+<div class="paragraph">
+<p><span class="image"><img src="images/executionstatus.png" alt="ExecutionStatus"></span></p>
+</div>
+<div class="paragraph">
+<p>Here is a summary of all execution status with their corresponding meanings.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>OK : The execution was performed correctly and all controls were OK.</p>
+</li>
+<li>
+<p>KO : The execution was performed correcly and at least one control failed resulting a global KO. That means that a bug needs to be reported to development teams.</p>
+</li>
+<li>
+<p>FA : The execution did not performed correctly and needs a correction from the team that is in charge of managing the testcases. It couls be a failed SQL or action during the test.</p>
+</li>
+<li>
+<p>NA : Test could not be executed as a data could not be retreived. That probably means that the test is not possible in the current environment/status.</p>
+</li>
+<li>
+<p>NE : Test Case was not executed (following a condition execution).</p>
+</li>
+<li>
+<p>WE : Test Case was not yet executed (waiting a manual execution).</p>
+</li>
+<li>
+<p>PE : Test Case is currently running.</p>
+</li>
+<li>
+<p>QU : Test Case is still waiting in the queue for ressources or constrains to be released.</p>
+</li>
+<li>
+<p>QE : Test Case failed in the queue and will not be triggered.</p>
+</li>
+<li>
+<p>CA : Test Case has been cancelled by user.</p>
+</li>
+</ul>
+</div>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-09-29 21:25:44 CEST
+Last updated 2018-05-29 21:18:08 CEST
 </div>
 </div>
 </body>

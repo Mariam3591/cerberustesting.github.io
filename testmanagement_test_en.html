@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.6.1">
-<title>Test attributes</title>
+<title>Test</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -429,8 +429,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="header">
 </div>
 <div id="content">
-<div id="preamble">
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_test">Test</h3>
 <div class="paragraph">
 <p>In this section, you will find information on Test in Cerberus.</p>
 </div>
@@ -440,6 +440,23 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="paragraph">
 <p><span class="image"><img src="images/testpage.png" alt="TestPage"></span></p>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+There are 2 Tests that have a specific behaviour and allow to add before and after any test case some other testcases.<br>
+Those 2 tests are 'Pre Testing' and 'Post Testing'. They are identifying all test cases that will respectivly be added at the begginning and the end of the testcases.<br>
+For a given testcase running on an application app1, the following rules will apply :<br>
+. Only testcases inside 'Pre Testing' and 'Post Testing' will be added.<br>
+. Only active testcases will be added.<br>
+. Only testcases that are within the From Sprint / From Rev and To Sprint / To Rev<br>
+. The testcases will be added sorted by testcase id.
+</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect2">
@@ -508,7 +525,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-09-29 21:25:44 CEST
+Last updated 2018-05-27 21:45:07 CEST
 </div>
 </div>
 </body>

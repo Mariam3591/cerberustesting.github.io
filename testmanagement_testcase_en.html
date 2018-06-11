@@ -429,13 +429,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="header">
 </div>
 <div id="content">
-<div id="preamble">
-<div class="sectionbody">
-<div class="paragraph">
-<p>In this section, you will find information on TestCase in Cerberus.</p>
-</div>
-</div>
-</div>
 <div class="sect2">
 <h3 id="_testcase_list">TestCase List</h3>
 <div class="paragraph">
@@ -487,44 +480,83 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Testcase</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">An ID.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An ID (alphanumeric caracter).</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Define if the test is active.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Status</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Used to implement a workflow and gives way to filter Testcase.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Active</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Boolean that defines if the Testcase can be launched.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Short Description</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Provide a brief introduction about the Testcase.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Application</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The application for which the testcase is defined.</p></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Function</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Another categorization field.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Priority</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Assign to any of its execution a certain importance to calculate the CI score.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Detailed Description</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Provide more detail about the Testcase. Isn&#8217;t visible in reports.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Comment</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Should be use in addition with the short description to give temporary comment.</p></td>
+</tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p>The Activation Criterias defines condition to enable/block the Testcase to be launched in specific context (countries, environment&#8230;&#8203;). This level of specification is the most important (override all the others conditions)</p>
+</div>
+<div class="paragraph">
+<p>A Testcase can be linked to multiple Labels depending on their assigned system (see labels section)</p>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_create_testcase">Create TestCase</h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Go to <strong><span class="red">TestCase &#8594; TestCase List</span></strong>. <span class="image" style="float: right"><img src="images/testcasecreate.png" alt="CreateTestCase" width="250" height="250"></span></p>
+<p>Go to <strong><span class="red">TestCase &#8594; TestCase List</span></strong>.</p>
 </li>
 <li>
 <p>Click on <strong><span class="red">Create TestCase</span></strong>.</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Feed the <strong><span class="red">Test</span></strong> field with the test name.</p>
-</li>
-<li>
-<p>Feed the <strong><span class="red">Description</span></strong> field with a short description of this test.</p>
-</li>
-<li>
-<p>Continue to describe.</p>
-</li>
-<li>
-<p>Click on <strong><span class="red">Save</span></strong>.</p>
 </li>
 </ol>
 </div>
+<div class="paragraph">
+<p><span class="image" style="float: right"><img src="images/testcasecreate.png" alt="CreateTestCase" width="250" height="250"></span></p>
+</div>
+<div class="paragraph">
+<p>Only the following field are mandatory:</p>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Feed the <strong><span class="red">Test</span></strong> field with the test name. (a default value should be selected)</p>
+</li>
+<li>
+<p>Modify the <strong><span class="red">Testcase ID</span></strong> if necessary (it can be modified after, but the according execution history will be lost)</p>
+</li>
+<li>
+<p>Select the <strong><span class="red">Application</span></strong></p>
+</li>
+<li>
+<p>Continue to describe</p>
+</li>
+<li>
+<p>Click on <strong><span class="red">Save</span></strong> as soon as you&#8217;re done.</p>
 </li>
 </ol>
 </div>
@@ -598,22 +630,7 @@ You have the possibility to switch the position of your steps by clicking on the
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Unknown</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Unknown action. Default Action when creating a new action</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">keypress</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">will allow you to press any key in the current web page. <strong><span class="red">Value1</span></strong> : Location of the element from which press the key. <strong><span class="red">Value2</span></strong> : Keycode of the key to press Example : ENTER</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">hidekeyboard</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Hide the currently visible keyboard</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">swipe</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">TBD</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unknown action. Default Action when creating a new action. Warning: make the execution fail.</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
@@ -623,13 +640,13 @@ You have the possibility to switch the position of your steps by clicking on the
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">mouseButtonLeftPress</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">TBD</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mouseLeftButtonPress</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">allow to press and keep the button pressed until the next ButtonRelease action</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">mouseButtonLeftRelease</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">TBD</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mouseLeftButtonRelease</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">release the mouse button. Usefull with ButtonPress to perform drag &amp; drop</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
@@ -645,6 +662,11 @@ You have the possibility to switch the position of your steps by clicking on the
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mouseOver</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mouse cursor over an object <strong><span class="red">Element path</span></strong> : the id of the element</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">focustoIframe</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">TBD</p></td>
 <td class="tableblock halign-left valign-top"></td>
@@ -656,7 +678,7 @@ You have the possibility to switch the position of your steps by clicking on the
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">switchToWindow</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">When the Test case need to switch to another window (like popup dialog) this action is used. Just specify the title or the URL of the other window to switch to this window.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">when the Test case need to switch to another window (like popup dialog) this action is used. Just specify the title or the URL of the other window to switch to this window.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">title=titleOfThisNewWindow or url=http://url_of_this_new_window</p></td>
 </tr>
 <tr>
@@ -665,28 +687,43 @@ You have the possibility to switch the position of your steps by clicking on the
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">mouseOver</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Mouse cursor over an object <strong><span class="red">Element path</span></strong> : the id of the element</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">OpenUrlWithBase</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">TBD</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OpenUrl action using the based defined in the environment section</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/cerberustesting</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">OpenUrlLogin</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">TBD</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OpenUrl action using credential</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">OpenUrl</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Open a specified url</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com" class="bare">https://github.com</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">executeJS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">execute a JS script (no output can be retrieved)</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">openApp</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TBD</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">closeApp</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">TBD</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">select</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">TBD</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">select an option in a &lt;select&gt; tag. this 'text' must be defined : &lt;option value="text"&gt;</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">keypress</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">will allow you to press any key in the current web page. <strong><span class="red">Value1</span></strong> : Location of the element from which press the key. <strong><span class="red">Value2</span></strong> : Keycode of the key to press Example : ENTER</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
@@ -695,23 +732,28 @@ You have the possibility to switch the position of your steps by clicking on the
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">hidekeyboard</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hide the currently visible keyboard</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">swipe</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The action simulates a user pressing down on the screen, sliding to another position, and removing their finger from the screen. Swipe action can be used neither with unique parameter <strong><span class="red">UP</span></strong>,<strong><span class="red">DOWN</span></strong>,<strong><span class="red">LEFT</span></strong>,<strong><span class="red">RIGHT</span></strong>, or with combination of parameter <strong><span class="red">CUSTOM</span></strong> and <strong><span class="red">x1;y1;x2;y2</span></strong>, which are coordinates of origin point (x1;y1) and <mark>relatives</mark> coodinates of destination point (x2;y2)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">swipe UP : will swipe from the 2/3 to the 1/3 of the screen. swipe CUSTOM 100;100;0;100 : will swipe from the point (100;100) to the point (100;200)</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">wait</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Wait for a certain amount of time Feed a number (ms) or wait for element present feed an element (xpath)</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">CallSoapWithBase</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">waitVanish</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">TBD</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">CallSoap</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">To call a SOAP.  Feed one the following field <strong><span class="red">Soap Name (library)</span></strong> : Name of the SOAP stored in library  <strong><span class="red">Property Name</span></strong> : Name of the property if the SOAP is defined in property</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">removeDifference</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">TBD</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">callService</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">call a service defined the Service Library and provide the output within the execution</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
@@ -725,7 +767,7 @@ You have the possibility to switch the position of your steps by clicking on the
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">CalculateProperty</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">calculateProperty</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">will allow you to calculate a <strong><span class="red">Property</span></strong> defined in the property section of the test case.
 [Optional] Feed <strong><span class="red">Value2</span></strong> with another property to affect to the previous <strong><span class="red">Property Name</span></strong> a new value. Useful to override the one defined from the property section during an execution.</p></td>
 <td class="tableblock halign-left valign-top"></td>
@@ -736,8 +778,8 @@ You have the possibility to switch the position of your steps by clicking on the
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">skipAction</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Skip this action. No action will be executed and engine will go to the next action. Controls associated to this action will be skipped too.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">removeDifference</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DEPRECATED</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 </tbody>
@@ -765,11 +807,6 @@ You have the possibility to switch the position of your steps by clicking on the
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">getPageSource</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">TBD</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">skipControl</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Skip the control.</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
@@ -804,12 +841,12 @@ You have the possibility to switch the position of your steps by clicking on the
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">verifyElementNotPresent</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">TBD</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><span class="green">OK</span></strong> if <strong><span class="red">Element</span></strong> is  not found (from the source code) on the current page.</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">verifyElementNotVisible</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">TBD</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><span class="green">OK</span></strong> if <strong><span class="red">Element</span></strong> is found and visible (according to rendering) on the current page.</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
@@ -913,21 +950,43 @@ You have the possibility to switch the position of your steps by clicking on the
 <div class="sect3">
 <h4 id="_property">Property</h4>
 <div class="paragraph">
-<p>When Clicking on Button <span class="image"><img src="images/buttonmanageproperties.png" alt="buttonManageProperties"></span>, the Window "Manage Properties" will open.
-From there you can :</p>
+<p>When clicking on Tab <span class="image"><img src="images/buttonmanageproperties.png" alt="buttonManageProperties"></span>, the Property menu will appear.
+From there you can manage your TestCase properties or see your Inherited Properties - coming from the step libraries of your use steps.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/windowmanageproperties.png" alt="windowManageProperties"></span></p>
+</div>
+<div class="paragraph">
+<p>Properties are the key element of your TestCase to manage different variables in the same scenario. A property is identified by its name and the country for which it&#8217;s defined (e.g. you cannot have two properties defined for the same country with the same name).</p>
+</div>
+<div class="paragraph">
+<p>Properties can be called by their name using the follwing syntaxes:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>either manage your TestCase properties</p>
+<p><code>%property.property_name%</code> : the execution will <strong>stop</strong> if any problem in the property calculation</p>
 </li>
 <li>
-<p>or see your inherited properties - coming from the step libraries of your use steps.</p>
+<p><code>%property_name_here%</code> : the execution will <strong>not stop</strong> if any problem in the property calculation</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="images/windowmanageproperties.png" alt="windowManageProperties"></span></p>
+<p>When handling Datalib, the syntaxes to call the subdata are :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>%property.property_name.sub_data_name%</code> or <code>%property_name.sub_data_name%</code></p>
+</li>
+<li>
+<p><code>%property.property_name(sub_data_name)%</code> or <code>%property_name(sub_data_name)%</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Properties can be called in action or control values field or in another property.</p>
 </div>
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
@@ -977,6 +1036,90 @@ From there you can :</p>
 </tr>
 </tbody>
 </table>
+</div>
+<div class="sect3">
+<h4 id="_property_types">Property Types</h4>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Field</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Description</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Example</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">text</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">assign the property an alphanumeric value. Can invoke other properties</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>%system.EXECUTIONID%_test</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">getFromDataLib</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">query the corresponding datalib (identified by its name)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Datalib_Name</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">getFromSQL</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">run a specific query an get the first, and only the first, result. The DB must be specified</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>select TestCase from testcasestepactioncontrol where Control = 'verifyElementInElement'</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">getFromJS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Execute the specified JavaScript script without getting any output</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>var xPathRes = document.evaluate ("//*[@data-cerberus='button_basket_ProductBloc_modifyProduct1']", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null); xPathRes.singleNodeValue.click();</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">getFromJson</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JSON path to get a certain element from a service call</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>$.status</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">getFromXml</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Xpath to get a certain element from a service call</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>//OrderId/text()</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">getFromGroovy</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Execute the specified Groovy script and get the last defined variable</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>'%property.date%'.replace('\','-').substring(0,10)</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect4">
+<h5 id="_sql_queries_management">SQL queries management:</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>queries can be stored inside the test case and launched using getFromSQL. Only one value of the first row can be retrieved.</p>
+</li>
+<li>
+<p>queries can be stored inside a Datalib, according to its DB. Several values of the first row can be retrieved.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>We recommend the Datalib since its simplifies the modification of any request, if some queries can be re-used.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_service_management">Service management:</h5>
+<div class="paragraph">
+<p>A service must be referenced in Service Library</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>it can be called using the callService property, parsing will be performed using properties (getFromJson, getFromXml)</p>
+</li>
+<li>
+<p>it can be stored in a datalib and all the field will be parsed using the Subdatas.</p>
+</li>
+</ul>
+</div>
+</div>
 </div>
 <div class="sect3">
 <h4 id="_variables">Variables</h4>
@@ -1145,6 +1288,14 @@ As a consequence the full syntax will look like this :</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Host of the tested Application</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.APP_CONTEXTROOT%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Context Root of the tested Application</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.EXEURL%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Full Url of the tested Application</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">%system.APP_VAR1%</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">VAR1 of the application on the environment.</p></td>
 </tr>
@@ -1215,6 +1366,10 @@ As a consequence the full syntax will look like this :</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">%system.TESTCASE%</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">TestCase</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.TESTCASEDESCRIPTION%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TestCaseDescription</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">%system.SSIP%</p></td>
@@ -1305,7 +1460,7 @@ As a consequence the full syntax will look like this :</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Day of yesterday</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">%system.TODAY-doy%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.YESTERDAY-doy%</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Day of yesterday from the beginning of the year</p></td>
 </tr>
 <tr>
@@ -1319,6 +1474,22 @@ As a consequence the full syntax will look like this :</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">%system.YESTERDAY-ss%</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Second of yesterday</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.TOMORROW-yyyy%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Year of tomorrow</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.TOMORROW-MM%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Month of tomorrw</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.TOMORROW-dd%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Day of tomorrw</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.TOMORROW-doy%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Day of tomorrw from the beginning of the year</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">%system.ELAPSED-EXESTART%</p></td>
@@ -1447,7 +1618,7 @@ You can tune the list of UserAgent and ScreenSize proposed in autocomplete mode 
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-09-29 21:25:44 CEST
+Last updated 2018-05-30 21:05:06 CEST
 </div>
 </div>
 </body>

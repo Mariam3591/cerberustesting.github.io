@@ -429,13 +429,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="header">
 </div>
 <div id="content">
-<div id="preamble">
-<div class="sectionbody">
-<div class="paragraph">
-<p>In this section, you will find information on TestCase in Cerberus.</p>
-</div>
-</div>
-</div>
 <div class="sect2">
 <h3 id="_testcase_list">TestCase List</h3>
 <div class="paragraph">
@@ -602,21 +595,6 @@ You have the possibility to switch the position of your steps by clicking on the
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">keypress</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">will allow you to press any key in the current web page. <strong><span class="red">Value1</span></strong> : Location of the element from which press the key. <strong><span class="red">Value2</span></strong> : Keycode of the key to press Example : ENTER</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">hidekeyboard</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Hide the currently visible keyboard</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">swipe</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">TBD</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">click</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">will allow you to click on an element inside the current page.
 <strong><span class="red">Value1</span></strong>	Identifier and name of the element to click in the form of : identifier=html_reference. Example : id=html_reference</p></td>
@@ -645,6 +623,11 @@ You have the possibility to switch the position of your steps by clicking on the
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mouseOver</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mouse cursor over an object <strong><span class="red">Element path</span></strong> : the id of the element</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">focustoIframe</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">TBD</p></td>
 <td class="tableblock halign-left valign-top"></td>
@@ -665,11 +648,6 @@ You have the possibility to switch the position of your steps by clicking on the
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">mouseOver</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Mouse cursor over an object <strong><span class="red">Element path</span></strong> : the id of the element</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">OpenUrlWithBase</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">TBD</p></td>
 <td class="tableblock halign-left valign-top"></td>
@@ -685,8 +663,28 @@ You have the possibility to switch the position of your steps by clicking on the
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">executeJS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TBD</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">openApp</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TBD</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">closeApp</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TBD</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">select</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">TBD</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">keypress</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">will allow you to press any key in the current web page. <strong><span class="red">Value1</span></strong> : Location of the element from which press the key. <strong><span class="red">Value2</span></strong> : Keycode of the key to press Example : ENTER</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
@@ -695,22 +693,27 @@ You have the possibility to switch the position of your steps by clicking on the
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">hidekeyboard</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hide the currently visible keyboard</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">swipe</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TBD</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">wait</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Wait for a certain amount of time Feed a number (ms) or wait for element present feed an element (xpath)</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">CallSoapWithBase</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">waitVanish</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">TBD</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">CallSoap</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">To call a SOAP.  Feed one the following field <strong><span class="red">Soap Name (library)</span></strong> : Name of the SOAP stored in library  <strong><span class="red">Property Name</span></strong> : Name of the property if the SOAP is defined in property</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">removeDifference</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">callService</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">TBD</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
@@ -736,8 +739,8 @@ You have the possibility to switch the position of your steps by clicking on the
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">skipAction</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Skip this action. No action will be executed and engine will go to the next action. Controls associated to this action will be skipped too.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">removeDifference</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DEPRECATED</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 </tbody>
@@ -765,11 +768,6 @@ You have the possibility to switch the position of your steps by clicking on the
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">getPageSource</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">TBD</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">skipControl</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Skip the control.</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
@@ -1305,7 +1303,7 @@ As a consequence the full syntax will look like this :</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Day of yesterday</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">%system.TODAY-doy%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.YESTERDAY-doy%</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Day of yesterday from the beginning of the year</p></td>
 </tr>
 <tr>
@@ -1319,6 +1317,22 @@ As a consequence the full syntax will look like this :</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">%system.YESTERDAY-ss%</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Second of yesterday</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.TOMORROW-yyyy%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Year of tomorrow</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.TOMORROW-MM%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Month of tomorrow</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.TOMORROW-dd%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Day of tomorrow</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.TOMORROW-doy%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Day of tomorrow from the beginning of the year</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">%system.ELAPSED-EXESTART%</p></td>
@@ -1447,7 +1461,7 @@ Il est possible de tuner les liste des UserAgent et ScreenSize proposés en mode
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-09-29 21:25:44 CEST
+Last updated 2018-04-12 22:42:11 CEST
 </div>
 </div>
 </body>

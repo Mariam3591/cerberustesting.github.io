@@ -462,29 +462,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>[GUI] Added 2 buttons on TestCaseExecution page in order to view the prameters of the corresponding Queue and create a new queue from the existing one.</p>
 </li>
 <li>
-<p>[ENGINE] New queueing system that allow 3 level of constrains:</p>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>global Cerberus level -&#8594; parameter : <em>cerberus_queueexecution_global_threadpoolsize</em></p>
+<p>[ENGINE] New queueing system that allow 3 level of constrains: 1) global Cerberus level -&#8594; parameter : <em>cerberus_queueexecution_global_threadpoolsize</em> 2) Application environment level that can be configured in application modal at environment level (poolsize) 3) Robot IP level that can be configured in invariant table ROBOTHOST invariant (gp1 needs to be feeded with integer value) Default value taken from parameter : <em>cerberus_queueexecution_defaultrobothost_threadpoolsize</em></p>
 </li>
 <li>
-<p>Application environment level that can be configured in application modal at environment level (poolsize)</p>
-</li>
-<li>
-<p>Robot IP level that can be configured in invariant table ROBOTHOST invariant (gp1 needs to be feeded with integer value) Default value taken from parameter : <em>cerberus_queueexecution_defaultrobothost_threadpoolsize</em></p>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>Execution will be taken from the Queue (QUEUED state) and triggered ASAP until any of the constrain are reached.</p>
-</li>
-<li>
-<p>Queue screen allow to control the result and followup the executions.</p>
-</li>
-<li>
-<p>1st tab display the list of queue execution, 2nd tab the list of constrain and level of saturation of every constrain, the 3rd tab display the timing of the last job that analyzed the queue and allow to force a new trigger of that job (should be automatic at the end of every queue successfully submitted).</p>
+<p>[ENGINE] Execution will be taken from the Queue (QUEUED state) and triggered ASAP until any of the constrain are reached. Queue screen allow to control the result and followup the executions. 1st tab display the list of queue execution, 2nd tab the list of constrain and level of saturation of every constrain, the 3rd tab display the timing of the last job that analyzed the queue and allow to force a new trigger of that job (should be automatic at the end of every queue successfully submitted).</p>
 </li>
 <li>
 <p>[GUI] Test Cases can now be renamed. When renamed, it loose the execution history.</p>
@@ -536,7 +517,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-09-29 21:25:43 CEST
+Last updated 2018-04-12 23:46:42 CEST
 </div>
 </div>
 </body>
