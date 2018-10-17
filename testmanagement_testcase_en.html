@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.6.1">
-<title>TestCase List</title>
+<title>TestCase</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -430,40 +430,42 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="content">
 <div class="sect2">
-<h3 id="_testcase_list">TestCase List</h3>
+<h3 id="_testcase">TestCase</h3>
+<div class="sect3">
+<h4 id="_testcase_list">TestCase List</h4>
 <div class="paragraph">
 <p><span class="image"><img src="images/testcaselistpage.png" alt="TestCaseListPage"></span></p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_shortcut">Shortcut</h3>
 <div class="sect3">
-<h4 id="_edit_testcase">Edit TestCase</h4>
+<h4 id="_shortcut">Shortcut</h4>
+<div class="sect4">
+<h5 id="_edit_testcase">Edit TestCase</h5>
 <div class="paragraph">
 <p><span class="image"><img src="images/testcaseshortcutedit.png" alt="TestCaseEdit" width="200" height="200"></span></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_delete_testcase">Delete TestCase</h4>
+<div class="sect4">
+<h5 id="_delete_testcase">Delete TestCase</h5>
 <div class="paragraph">
 <p><span class="image"><img src="images/testcaseshortcutdelete.png" alt="TestCaseDelete" width="200" height="200"></span></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_run_testcase">Run TestCase</h4>
+<div class="sect4">
+<h5 id="_run_testcase">Run TestCase</h5>
 <div class="paragraph">
 <p><span class="image"><img src="images/testcaseshortcutrun.png" alt="TestCaseRun" width="200" height="200"></span></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_duplicate_testcase">Duplicate TestCase</h4>
+<div class="sect4">
+<h5 id="_duplicate_testcase">Duplicate TestCase</h5>
 <div class="paragraph">
 <p><span class="image"><img src="images/testcaseshortcutduplicate.png" alt="TestCaseDuplicate" width="200" height="200"></span></p>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_testcase_attributes">TestCase attributes</h3>
+<div class="sect3">
+<h4 id="_testcase_attributes">TestCase attributes</h4>
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
 <col style="width: 50%;">
@@ -522,9 +524,85 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="paragraph">
 <p>A Testcase can be linked to multiple Labels depending on their assigned system (see labels section)</p>
 </div>
+<div class="paragraph">
+<p>You can define Robot constrains at testcase level in order to force the execution a specific testcase with a specific UserAgent or ScreenSize.
+This is used to test some specific behaviour of a website for a given UserAgent or ScreenSize.
+You can tune the list of UserAgent and ScreenSize proposed in autocomplete mode (on the GUI) by modifying the respective public invariant USERAGENT and SCREENSIZE.</p>
 </div>
-<div class="sect2">
-<h3 id="_create_testcase">Create TestCase</h3>
+<div class="paragraph">
+<p>UserAgent and ScreenSize will be defined at execution level following the rule :</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>TestCase</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Robot / Execution</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>UserAgent Result</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UserAgent1</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UserAgent1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UserAgent2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UserAgent2</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">user Agent unchanged</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UserAgent1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UserAgent2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UserAgent1</p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>TestCase</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Robot / Execution</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ScreenSize Result</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1024*768</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1024*768</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">640*360</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">640*360</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fullscreen</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1024*768</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">640*360</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1024*768</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_create_testcase">Create TestCase</h4>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -561,8 +639,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ol>
 </div>
 </div>
+</div>
 <div class="sect2">
-<h3 id="_implement_testcase">Implement TestCase</h3>
+<h3 id="_testcase_step">TestCase Step</h3>
 <div class="sect3">
 <h4 id="_step">Step</h4>
 <div class="olist arabic">
@@ -613,9 +692,23 @@ You have the possibility to switch the position of your steps by clicking on the
 <div class="paragraph">
 <p><span class="image"><img src="images/testcasemovestep1.png" alt="testcaseusestep"></span> <span class="image"><img src="images/testcasemovestep2.png" alt="testcaseusestep"></span></p>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+It is possible to loop over a step using the following configuration.
+<span class="image"><img src="images/testlooptep.png" alt="TestCaseLoopStep"></span>
+</td>
+</tr>
+</table>
 </div>
-<div class="sect3">
-<h4 id="_action">Action</h4>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_testcase_action">TestCase Action</h3>
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
 <col style="width: 33.3333%;">
@@ -636,8 +729,8 @@ You have the possibility to switch the position of your steps by clicking on the
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">click</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">will allow you to click on an element inside the current page.
-<strong><span class="red">Value1</span></strong>	Identifier and name of the element to click in the form of : identifier=html_reference. Example : id=html_reference</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<strong><span class="red">Value1</span></strong>	Identifier and name of the element to click in the form of : identifier=html_reference.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">id=html_reference, xpath=//*[@id='html_reference'], (Sikuli) picture=%object.NameOfYourObject.pictureurl%</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">mouseLeftButtonPress</p></td>
@@ -723,8 +816,8 @@ You have the possibility to switch the position of your steps by clicking on the
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">keypress</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">will allow you to press any key in the current web page. <strong><span class="red">Value1</span></strong> : Location of the element from which press the key. <strong><span class="red">Value2</span></strong> : Keycode of the key to press Example : ENTER</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">will allow you to press any key in the current web page. <strong><span class="red">Value1</span></strong> : Location of the element from which press the key. <strong><span class="red">Value2</span></strong> : Keycode of the key to press</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Examples : <code>ENTER</code> (GUI) , <code>Key.ENTER</code> (FAT)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">type</p></td>
@@ -784,9 +877,30 @@ You have the possibility to switch the position of your steps by clicking on the
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p>+<strong>For FAT client</strong></p>
 </div>
-<div class="sect3">
-<h4 id="_control">Control</h4>
+<div class="paragraph">
+<p>In order to perform any action/control (e.g. 'click', 'verifyElementPresent'), Application Object must be used to reference picture.
+Keep in mind that for click action, it will be performed in the center of the picture:
+<span class="image"><img src="images/sikuliclick1.png" alt="SikuliClick1"></span></p>
+</div>
+<div class="paragraph">
+<p>The keycodes (see. keypress action) also changes from GUI to FAT type. The syntaxes are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>KEYNAME</code> for GUI, ex : <code>ENTER</code></p>
+</li>
+<li>
+<p><code>Key.KEYNAME</code> for FAT, ex <code>Key.ENTER</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_testcase_control">TestCase Control</h3>
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
 <col style="width: 33.3333%;">
@@ -947,8 +1061,8 @@ You have the possibility to switch the position of your steps by clicking on the
 </tbody>
 </table>
 </div>
-<div class="sect3">
-<h4 id="_property">Property</h4>
+<div class="sect2">
+<h3 id="_testcase_property">TestCase Property</h3>
 <div class="paragraph">
 <p>When clicking on Tab <span class="image"><img src="images/buttonmanageproperties.png" alt="buttonManageProperties"></span>, the Property menu will appear.
 From there you can manage your TestCase properties or see your Inherited Properties - coming from the step libraries of your use steps.</p>
@@ -1036,7 +1150,6 @@ From there you can manage your TestCase properties or see your Inherited Propert
 </tr>
 </tbody>
 </table>
-</div>
 <div class="sect3">
 <h4 id="_property_types">Property Types</h4>
 <table class="tableblock frame-all grid-all spread">
@@ -1121,8 +1234,9 @@ From there you can manage your TestCase properties or see your Inherited Propert
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_variables">Variables</h4>
+</div>
+<div class="sect2">
+<h3 id="_testcase_variables">TestCase Variables</h3>
 <div class="paragraph">
 <p>You can use variables in many area of Cerberus. Those variable are used in order to perform some actions of controls in a dynamic way.
 3 types of variables can be created :</p>
@@ -1220,8 +1334,8 @@ That means that the following syntax :</p>
 <div class="paragraph">
 <p>Please note also that, if at the end of the decode operation, there are still references to %property.???% or %system.???% or %object.%%% in the field, the corresponding test case will report an error and generate an FA status.</p>
 </div>
-<div class="sect4">
-<h5 id="_property_variables">Property Variables</h5>
+<div class="sect3">
+<h4 id="_property_variables">Property Variables</h4>
 <div class="paragraph">
 <p>Property variable allow to have multi row content.
 As a consequence the full syntax will look like this :</p>
@@ -1236,8 +1350,8 @@ As a consequence the full syntax will look like this :</p>
 <p>If SubData is not defined, the key velue subdata will be used.</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_object_variables">Object Variables</h5>
+<div class="sect3">
+<h4 id="_object_variables">Object Variables</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1252,8 +1366,8 @@ As a consequence the full syntax will look like this :</p>
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_system_variables">System Variables</h5>
+<div class="sect3">
+<h4 id="_system_variables">System Variables</h4>
 <div class="paragraph">
 <p>Below you will find useful properties :</p>
 </div>
@@ -1273,15 +1387,27 @@ As a consequence the full syntax will look like this :</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">%system.APPLI%</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Application reference</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Application name</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">%system.BROWSER%</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Browser name of the current execution.</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.ROBOT%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Robot name of the current execution.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.ROBOTDECLI%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Robot declination name of the current execution.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.SCREENSIZE%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Robot screensize of the current execution.</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">%system.APP_DOMAIN%</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Domain of the Application</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Domain of the Application (defined at application level)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">%system.APP_HOST%</p></td>
@@ -1502,8 +1628,8 @@ As a consequence the full syntax will look like this :</p>
 </tbody>
 </table>
 </div>
-<div class="sect4">
-<h5 id="_tricks">Tricks</h5>
+<div class="sect3">
+<h4 id="_tricks">Tricks</h4>
 <div class="paragraph">
 <p>You will find below some tricks which help you to implement specific test cases.</p>
 </div>
@@ -1520,105 +1646,12 @@ It is possible to create a random property with a number of digit defined. You h
 </tr>
 </table>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-It is possible to loop over a step using the following configuration.
-<span class="image"><img src="images/testlooptep.png" alt="TestCaseLoopStep"></span>
-</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_robot_constrains">Robot Constrains</h4>
-<div class="paragraph">
-<p>You can define Robot constrains at testcase level in order to force the execution a specific testcase with a specific UserAgent or ScreenSize.
-This is used to test some specific behaviour of a website for a given UserAgent or ScreenSize.
-You can tune the list of UserAgent and ScreenSize proposed in autocomplete mode (on the GUI) by modifying the respective public invariant USERAGENT and SCREENSIZE.</p>
-</div>
-<div class="paragraph">
-<p>UserAgent and ScreenSize will be defined at execution level following the rule :</p>
-</div>
-<table class="tableblock frame-all grid-all spread">
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>TestCase</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Robot / Execution</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>UserAgent Result</strong></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UserAgent1</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UserAgent1</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UserAgent2</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UserAgent2</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">user Agent unchanged</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UserAgent1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UserAgent2</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UserAgent1</p></td>
-</tr>
-</tbody>
-</table>
-<table class="tableblock frame-all grid-all spread">
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>TestCase</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Robot / Execution</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ScreenSize Result</strong></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1024*768</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1024*768</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">640*360</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">640*360</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Fullscreen</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1024*768</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">640*360</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1024*768</p></td>
-</tr>
-</tbody>
-</table>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2018-05-30 21:05:06 CEST
+Last updated 2018-10-10 21:36:36 CEST
 </div>
 </div>
 </body>
