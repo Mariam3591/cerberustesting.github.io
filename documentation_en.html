@@ -458,11 +458,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#_testcase">5. TestCase</a>
 <ul class="sectlevel2">
-<li><a href="#_testcase_list">5.1. TestCase List</a></li>
-<li><a href="#_shortcut">5.2. Shortcut</a></li>
-<li><a href="#_testcase_attributes">5.3. TestCase attributes</a></li>
-<li><a href="#_create_testcase">5.4. Create TestCase</a></li>
-<li><a href="#_implement_testcase">5.5. Implement TestCase</a></li>
+<li><a href="#_testcase_2">5.1. TestCase</a></li>
+<li><a href="#_testcase_step">5.2. TestCase Step</a></li>
+<li><a href="#_testcase_action">5.3. TestCase Action</a></li>
+<li><a href="#_testcase_control">5.4. TestCase Control</a></li>
+<li><a href="#_testcase_property">5.5. TestCase Property</a></li>
+<li><a href="#_testcase_variables">5.6. TestCase Variables</a></li>
 </ul>
 </li>
 <li><a href="#_testcase_execution">6. TestCase execution</a>
@@ -607,10 +608,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel2">
 <li><a href="#_technical_architecture">29.1. Technical architecture</a></li>
 <li><a href="#_installation_guide">29.2. Installation guide</a></li>
-<li><a href="#_manual_installation">29.3. Manual installation</a></li>
-<li><a href="#_docker">29.4. Docker</a></li>
-<li><a href="#_cerberus_database_init">29.5. Cerberus database init</a></li>
-<li><a href="#_cerberus_configuration">29.6. Cerberus configuration</a></li>
+<li><a href="#_upgrade_cerberus_version">29.3. Upgrade Cerberus Version</a></li>
 </ul>
 </li>
 <li><a href="#_external_tools">30. External tools</a>
@@ -630,20 +628,22 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_maintenance">Maintenance</a>
 <ul class="sectlevel1">
 <li><a href="#_monitor_cerberus_performance">32. Monitor Cerberus performance</a></li>
-<li><a href="#_clean_database">33. Clean Database</a></li>
-<li><a href="#_upgrade_cerberus_version">34. Upgrade Cerberus Version</a></li>
-<li><a href="#_changelog">35. ChangeLog</a>
+<li><a href="#_database_purge">33. Database Purge</a></li>
+<li><a href="#_changelog">34. ChangeLog</a>
 <ul class="sectlevel2">
-<li><a href="#_1_1_13">35.1. 1.1.13</a></li>
-<li><a href="#_1_1_14">35.2. 1.1.14</a></li>
-<li><a href="#_2_0">35.3. 2.0</a></li>
-<li><a href="#_3_0">35.4. 3.0</a></li>
-<li><a href="#_3_1">35.5. 3.1</a></li>
-<li><a href="#_3_2">35.6. 3.2</a></li>
-<li><a href="#_3_3">35.7. 3.3</a></li>
-<li><a href="#_3_4">35.8. 3.4</a></li>
-<li><a href="#_3_5">35.9. 3.5</a></li>
-<li><a href="#_3_6">35.10. 3.6</a></li>
+<li><a href="#_1_1_13">34.1. 1.1.13</a></li>
+<li><a href="#_1_1_14">34.2. 1.1.14</a></li>
+<li><a href="#_2_0">34.3. 2.0</a></li>
+<li><a href="#_3_0">34.4. 3.0</a></li>
+<li><a href="#_3_1">34.5. 3.1</a></li>
+<li><a href="#_3_2">34.6. 3.2</a></li>
+<li><a href="#_3_3">34.7. 3.3</a></li>
+<li><a href="#_3_4">34.8. 3.4</a></li>
+<li><a href="#_3_5">34.9. 3.5</a></li>
+<li><a href="#_3_6">34.10. 3.6</a></li>
+<li><a href="#_3_7">34.11. 3.7</a></li>
+<li><a href="#_3_7_1">34.12. 3.7.1</a></li>
+<li><a href="#_3_8">34.13. 3.8</a></li>
 </ul>
 </li>
 </ul>
@@ -696,7 +696,7 @@ We encourage you to submit questions and discuss any aspects of the project on <
 <p>the possibility to run your tests, grouped in campaigns, easily and at a specific frequence</p>
 </li>
 <li>
-<p>a reporting tool to visualize quickly and efficently the result of a campaign</p>
+<p>a reporting tool to visualize quickly and efficiently the result of a campaign</p>
 </li>
 <li>
 <p>much more&#8230;&#8203;</p>
@@ -965,7 +965,7 @@ Please verify with your administrator if system and application are already crea
 <p>Your TestCase is now created, find it in the list using filters.</p>
 </li>
 <li>
-<p>Edit it (cf <a href="#_implement_testcase">Implement TestCase</a>)</p>
+<p>Edit it (cf <a href="#Implement TestCase">[Implement TestCase]</a>)</p>
 </li>
 <li>
 <p>Create your first step « Open Google »</p>
@@ -1109,10 +1109,6 @@ For a given testcase running on an application app1, the following rules will ap
 <td class="tableblock halign-left valign-top"><p class="tableblock">Active</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Define if the test is active.</p></td>
 </tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Automated</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Define if the test contains automated testcase.</p></td>
-</tr>
 </tbody>
 </table>
 </div>
@@ -1137,9 +1133,6 @@ For a given testcase running on an application app1, the following rules will ap
 <p>Select the activation information in the <strong><span class="red">Active</span></strong> field.</p>
 </li>
 <li>
-<p>Select the automation information in the <strong><span class="red">Automated</span></strong> field.</p>
-</li>
-<li>
 <p>Click on <strong><span class="red">Save</span></strong>.</p>
 </li>
 </ol>
@@ -1157,40 +1150,42 @@ For a given testcase running on an application app1, the following rules will ap
 <h2 id="_testcase">5. TestCase</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_testcase_list">5.1. TestCase List</h3>
+<h3 id="_testcase_2">5.1. TestCase</h3>
+<div class="sect3">
+<h4 id="_testcase_list">5.1.1. TestCase List</h4>
 <div class="paragraph">
 <p><span class="image"><img src="./images/testcaselistpage.png" alt="TestCaseListPage"></span></p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_shortcut">5.2. Shortcut</h3>
 <div class="sect3">
-<h4 id="_edit_testcase">5.2.1. Edit TestCase</h4>
+<h4 id="_shortcut">5.1.2. Shortcut</h4>
+<div class="sect4">
+<h5 id="_edit_testcase">Edit TestCase</h5>
 <div class="paragraph">
 <p><span class="image"><img src="./images/testcaseshortcutedit.png" alt="TestCaseEdit" width="200" height="200"></span></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_delete_testcase">5.2.2. Delete TestCase</h4>
+<div class="sect4">
+<h5 id="_delete_testcase">Delete TestCase</h5>
 <div class="paragraph">
 <p><span class="image"><img src="./images/testcaseshortcutdelete.png" alt="TestCaseDelete" width="200" height="200"></span></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_run_testcase">5.2.3. Run TestCase</h4>
+<div class="sect4">
+<h5 id="_run_testcase">Run TestCase</h5>
 <div class="paragraph">
 <p><span class="image"><img src="./images/testcaseshortcutrun.png" alt="TestCaseRun" width="200" height="200"></span></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_duplicate_testcase">5.2.4. Duplicate TestCase</h4>
+<div class="sect4">
+<h5 id="_duplicate_testcase">Duplicate TestCase</h5>
 <div class="paragraph">
 <p><span class="image"><img src="./images/testcaseshortcutduplicate.png" alt="TestCaseDuplicate" width="200" height="200"></span></p>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_testcase_attributes">5.3. TestCase attributes</h3>
+<div class="sect3">
+<h4 id="_testcase_attributes">5.1.3. TestCase attributes</h4>
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
 <col style="width: 50%;">
@@ -1249,9 +1244,85 @@ For a given testcase running on an application app1, the following rules will ap
 <div class="paragraph">
 <p>A Testcase can be linked to multiple Labels depending on their assigned system (see labels section)</p>
 </div>
+<div class="paragraph">
+<p>You can define Robot constrains at testcase level in order to force the execution a specific testcase with a specific UserAgent or ScreenSize.
+This is used to test some specific behaviour of a website for a given UserAgent or ScreenSize.
+You can tune the list of UserAgent and ScreenSize proposed in autocomplete mode (on the GUI) by modifying the respective public invariant USERAGENT and SCREENSIZE.</p>
 </div>
-<div class="sect2">
-<h3 id="_create_testcase">5.4. Create TestCase</h3>
+<div class="paragraph">
+<p>UserAgent and ScreenSize will be defined at execution level following the rule :</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>TestCase</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Robot / Execution</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>UserAgent Result</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UserAgent1</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UserAgent1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UserAgent2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UserAgent2</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">user Agent unchanged</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UserAgent1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UserAgent2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UserAgent1</p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>TestCase</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Robot / Execution</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ScreenSize Result</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1024*768</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1024*768</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">640*360</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">640*360</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fullscreen</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1024*768</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">640*360</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1024*768</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_create_testcase">5.1.4. Create TestCase</h4>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -1288,10 +1359,11 @@ For a given testcase running on an application app1, the following rules will ap
 </ol>
 </div>
 </div>
+</div>
 <div class="sect2">
-<h3 id="_implement_testcase">5.5. Implement TestCase</h3>
+<h3 id="_testcase_step">5.2. TestCase Step</h3>
 <div class="sect3">
-<h4 id="_step">5.5.1. Step</h4>
+<h4 id="_step">5.2.1. Step</h4>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -1340,9 +1412,23 @@ You have the possibility to switch the position of your steps by clicking on the
 <div class="paragraph">
 <p><span class="image"><img src="./images/testcasemovestep1.png" alt="testcaseusestep"></span> <span class="image"><img src="./images/testcasemovestep2.png" alt="testcaseusestep"></span></p>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+It is possible to loop over a step using the following configuration.
+<span class="image"><img src="./images/testlooptep.png" alt="TestCaseLoopStep"></span>
+</td>
+</tr>
+</table>
 </div>
-<div class="sect3">
-<h4 id="_action">5.5.2. Action</h4>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_testcase_action">5.3. TestCase Action</h3>
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
 <col style="width: 33.3333%;">
@@ -1363,8 +1449,8 @@ You have the possibility to switch the position of your steps by clicking on the
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">click</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">will allow you to click on an element inside the current page.
-<strong><span class="red">Value1</span></strong>	Identifier and name of the element to click in the form of : identifier=html_reference. Example : id=html_reference</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<strong><span class="red">Value1</span></strong>	Identifier and name of the element to click in the form of : identifier=html_reference.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">id=html_reference, xpath=//*[@id='html_reference'], (Sikuli) picture=%object.NameOfYourObject.pictureurl%</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">mouseLeftButtonPress</p></td>
@@ -1450,8 +1536,8 @@ You have the possibility to switch the position of your steps by clicking on the
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">keypress</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">will allow you to press any key in the current web page. <strong><span class="red">Value1</span></strong> : Location of the element from which press the key. <strong><span class="red">Value2</span></strong> : Keycode of the key to press Example : ENTER</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">will allow you to press any key in the current web page. <strong><span class="red">Value1</span></strong> : Location of the element from which press the key. <strong><span class="red">Value2</span></strong> : Keycode of the key to press</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Examples : <code>ENTER</code> (GUI) , <code>Key.ENTER</code> (FAT)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">type</p></td>
@@ -1511,9 +1597,30 @@ You have the possibility to switch the position of your steps by clicking on the
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p>+<strong>For FAT client</strong></p>
 </div>
-<div class="sect3">
-<h4 id="_control">5.5.3. Control</h4>
+<div class="paragraph">
+<p>In order to perform any action/control (e.g. 'click', 'verifyElementPresent'), Application Object must be used to reference picture.
+Keep in mind that for click action, it will be performed in the center of the picture:
+<span class="image"><img src="./images/sikuliclick1.png" alt="SikuliClick1"></span></p>
+</div>
+<div class="paragraph">
+<p>The keycodes (see. keypress action) also changes from GUI to FAT type. The syntaxes are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>KEYNAME</code> for GUI, ex : <code>ENTER</code></p>
+</li>
+<li>
+<p><code>Key.KEYNAME</code> for FAT, ex <code>Key.ENTER</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_testcase_control">5.4. TestCase Control</h3>
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
 <col style="width: 33.3333%;">
@@ -1674,8 +1781,8 @@ You have the possibility to switch the position of your steps by clicking on the
 </tbody>
 </table>
 </div>
-<div class="sect3">
-<h4 id="_property">5.5.4. Property</h4>
+<div class="sect2">
+<h3 id="_testcase_property">5.5. TestCase Property</h3>
 <div class="paragraph">
 <p>When clicking on Tab <span class="image"><img src="./images/buttonmanageproperties.png" alt="buttonManageProperties"></span>, the Property menu will appear.
 From there you can manage your TestCase properties or see your Inherited Properties - coming from the step libraries of your use steps.</p>
@@ -1763,9 +1870,8 @@ From there you can manage your TestCase properties or see your Inherited Propert
 </tr>
 </tbody>
 </table>
-</div>
 <div class="sect3">
-<h4 id="_property_types">5.5.5. Property Types</h4>
+<h4 id="_property_types">5.5.1. Property Types</h4>
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
 <col style="width: 33.3333%;">
@@ -1848,8 +1954,9 @@ From there you can manage your TestCase properties or see your Inherited Propert
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_variables">5.5.6. Variables</h4>
+</div>
+<div class="sect2">
+<h3 id="_testcase_variables">5.6. TestCase Variables</h3>
 <div class="paragraph">
 <p>You can use variables in many area of Cerberus. Those variable are used in order to perform some actions of controls in a dynamic way.
 3 types of variables can be created :</p>
@@ -1947,8 +2054,8 @@ That means that the following syntax :</p>
 <div class="paragraph">
 <p>Please note also that, if at the end of the decode operation, there are still references to %property.???% or %system.???% or %object.%%% in the field, the corresponding test case will report an error and generate an FA status.</p>
 </div>
-<div class="sect4">
-<h5 id="_property_variables">Property Variables</h5>
+<div class="sect3">
+<h4 id="_property_variables">5.6.1. Property Variables</h4>
 <div class="paragraph">
 <p>Property variable allow to have multi row content.
 As a consequence the full syntax will look like this :</p>
@@ -1963,8 +2070,8 @@ As a consequence the full syntax will look like this :</p>
 <p>If SubData is not defined, the key velue subdata will be used.</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_object_variables">Object Variables</h5>
+<div class="sect3">
+<h4 id="_object_variables">5.6.2. Object Variables</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1979,8 +2086,8 @@ As a consequence the full syntax will look like this :</p>
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_system_variables">System Variables</h5>
+<div class="sect3">
+<h4 id="_system_variables">5.6.3. System Variables</h4>
 <div class="paragraph">
 <p>Below you will find useful properties :</p>
 </div>
@@ -2000,15 +2107,27 @@ As a consequence the full syntax will look like this :</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">%system.APPLI%</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Application reference</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Application name</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">%system.BROWSER%</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Browser name of the current execution.</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.ROBOT%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Robot name of the current execution.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.ROBOTDECLI%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Robot declination name of the current execution.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.SCREENSIZE%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Robot screensize of the current execution.</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">%system.APP_DOMAIN%</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Domain of the Application</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Domain of the Application (defined at application level)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">%system.APP_HOST%</p></td>
@@ -2229,8 +2348,8 @@ As a consequence the full syntax will look like this :</p>
 </tbody>
 </table>
 </div>
-<div class="sect4">
-<h5 id="_tricks">Tricks</h5>
+<div class="sect3">
+<h4 id="_tricks">5.6.4. Tricks</h4>
 <div class="paragraph">
 <p>You will find below some tricks which help you to implement specific test cases.</p>
 </div>
@@ -2247,99 +2366,6 @@ It is possible to create a random property with a number of digit defined. You h
 </tr>
 </table>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-It is possible to loop over a step using the following configuration.
-<span class="image"><img src="./images/testlooptep.png" alt="TestCaseLoopStep"></span>
-</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_robot_constrains">5.5.7. Robot Constrains</h4>
-<div class="paragraph">
-<p>You can define Robot constrains at testcase level in order to force the execution a specific testcase with a specific UserAgent or ScreenSize.
-This is used to test some specific behaviour of a website for a given UserAgent or ScreenSize.
-You can tune the list of UserAgent and ScreenSize proposed in autocomplete mode (on the GUI) by modifying the respective public invariant USERAGENT and SCREENSIZE.</p>
-</div>
-<div class="paragraph">
-<p>UserAgent and ScreenSize will be defined at execution level following the rule :</p>
-</div>
-<table class="tableblock frame-all grid-all spread">
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>TestCase</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Robot / Execution</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>UserAgent Result</strong></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UserAgent1</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UserAgent1</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UserAgent2</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UserAgent2</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">user Agent unchanged</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UserAgent1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UserAgent2</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UserAgent1</p></td>
-</tr>
-</tbody>
-</table>
-<table class="tableblock frame-all grid-all spread">
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>TestCase</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Robot / Execution</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ScreenSize Result</strong></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1024*768</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1024*768</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">640*360</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">640*360</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Fullscreen</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1024*768</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">640*360</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1024*768</p></td>
-</tr>
-</tbody>
-</table>
 <div class="paragraph">
 <p><a href="https://github.com/vertigo17/Cerberus/edit/master/source/src/main/resources/documentation/include/en/testmanagement_testcase_en.adoc" target="_blank" rel="noopener"><span class="image"><img src="./images/edit-doc.png" alt="FR" width="20" height="20"></span></a> <em>Something is incorrect/missing in this section? Feel free to submit modification.</em></p>
 </div>
@@ -3925,7 +3951,7 @@ It is used in order to make the access to the data linked to the environment so 
 <div class="title">Warning</div>
 </td>
 <td class="content">
-To guaranty performance of Cerbeurs over the time, please refer to <a href="#_clean_database">Clean Database</a> section
+To guaranty performance of Cerbeurs over the time, please refer to <a href="#Clean Database">[Clean Database]</a> section
  to get information on database maintenance operation.
 </td>
 </tr>
@@ -4004,7 +4030,7 @@ Application and Database Must be in the same version.
 </td>
 <td class="content">
 The tunning of the parameters is necessary to unlock all the features,
-as described in the <a href="#_cerberus_configuration">Cerberus configuration</a> section.
+as described in the <a href="#Cerberus configuration">[Cerberus configuration]</a> section.
 </td>
 </tr>
 </table>
@@ -4346,6 +4372,12 @@ To be used for monitoring purpose.</p></td>
 <div class="sect2">
 <h3 id="_technical_architecture">29.1. Technical architecture</h3>
 <div class="paragraph">
+<p>Cerberus is a JAVA application that is linked to a database server.
+Cerberus is a web application that need a browser to connect to.
+Cerberus also require a robot infrastructure that depend on the type of test you want to execute.
+Web application testing require a Selenium server when mobile application require an Appium Server and Fat application a Sikuli server.</p>
+</div>
+<div class="paragraph">
 <p><span class="image"><img src="./images/architecture.png" alt="Logo"></span></p>
 </div>
 <div class="paragraph">
@@ -4354,107 +4386,14 @@ To be used for monitoring purpose.</p></td>
 </div>
 <div class="sect2">
 <h3 id="_installation_guide">29.2. Installation guide</h3>
-
-</div>
-<div class="sect2">
-<h3 id="_manual_installation">29.3. Manual installation</h3>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p><strong><span class="RED">For Linux</span></strong> :</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Requirements :</p>
-<div class="olist lowerroman">
-<ol class="lowerroman" type="i">
-<li>
-<p>MySQL/MariaDB server and client (If you want to use MySQL, you must get the 5.6.x version)</p>
-</li>
-<li>
-<p>Java 1.8 (package name on debian/ubuntu : openjdk-8-java)</p>
-</li>
-<li>
-<p>glassfish server (4.1.1) : you can download it on their website (if you are on CLI, just use wget on the download url)</p>
-<div class="olist upperalpha">
-<ol class="upperalpha" type="A">
-<li>
-<p>You&#8217;ll have to add MySQL JDBC connector drivers that you can get there : <a href="http://dev.mysql.com/downloads/connector/j/" class="bare">http://dev.mysql.com/downloads/connector/j/</a></p>
-</li>
-<li>
-<p>You must add AS_JAVA="path/to/java/folder/" in glassfish/config/asenv.conf</p>
-</li>
-</ol>
-</div>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>Cerberus installation :</p>
-<div class="olist lowerroman">
-<ol class="lowerroman" type="i">
-<li>
-<p>Download the last release of Cerberus Testing on the sourceforge : <a href="https://sourceforge.net/projects/cerberus-source/files/" class="bare">https://sourceforge.net/projects/cerberus-source/files/</a></p>
-</li>
-<li>
-<p>Setup your MySQL/MariaDB database :</p>
-<div class="olist upperalpha">
-<ol class="upperalpha" type="A">
-<li>
-<p>Connect on your MySQL/MariaDB server (Default : mysql -u root -proot)</p>
-</li>
-<li>
-<p>Type these commands :</p>
-<div class="olist upperroman">
-<ol class="upperroman" type="I">
-<li>
-<p>CREATE USER 'cerberus'@'%' IDENTIFIED BY 'toto';</p>
-</li>
-<li>
-<p>GRANT USAGE ON * . * TO 'cerberus'@'%' IDENTIFIED BY 'toto';</p>
-</li>
-<li>
-<p>GRANT USAGE ON * . * TO 'cerberus'@'localhost' IDENTIFIED BY 'toto';</p>
-</li>
-<li>
-<p>CREATE DATABASE IF NOT EXISTS <code>cerberus</code> ;</p>
-</li>
-<li>
-<p>GRANT ALL PRIVILEGES ON <code>cerberus</code> . * TO 'cerberus'@'%';</p>
-</li>
-</ol>
-</div>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>Edit the file (CerberusFolder/bin/)00Config.sh with your connection parameters and set the GLASSFISHPATH to the path to the bin folder of glassfish</p>
-</li>
-<li>
-<p>If you are using MariaDB, you&#8217;ll have to edit (CerberusFolder/bin/)01AppServerConfig.sh, comment the line under MySQL and uncomment the line under MariaDB.</p>
-</li>
-<li>
-<p>Run (CerberusFolder/bin/)01AppServerConfig.sh it will set the default configs of Cerberus Testing like the connection to the Cerberus database</p>
-</li>
-<li>
-<p>Run (CerberusFolder/bin/)02DeployApp.sh it will check that there&#8217;s no deployed Cerberus App and deploy the Cerberus App in the contextroot specified (Default : /Cerberus)</p>
-</li>
-<li>
-<p>You&#8217;re done ! You should be able to access to your Cerberus App from your website (example : <a href="http://localhost:8080/Cerberus" class="bare">http://localhost:8080/Cerberus</a>)</p>
-</li>
-</ol>
-</div>
-</li>
-</ol>
-</div>
-</li>
-</ol>
+<div class="sect3">
+<h4 id="_manual_installation">29.2.1. Manual installation</h4>
+<div class="paragraph">
+<p>Please refer to INSTALL File in the Cerberus.zip package file.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_docker">29.4. Docker</h3>
+<div class="sect3">
+<h4 id="_docker_installation">29.2.2. Docker installation</h4>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -4542,22 +4481,20 @@ To be used for monitoring purpose.</p></td>
 <p><a href="https://github.com/vertigo17/Cerberus/edit/master/source/src/main/resources/documentation/include/en/installation_installationguide_en.adoc" target="_blank" rel="noopener"><span class="image"><img src="./images/edit-doc.png" alt="FR" width="20" height="20"></span></a> <em>Something is incorrect/missing in this section? Feel free to submit modification.</em></p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_cerberus_database_init">29.5. Cerberus database init</h3>
-<div class="paragraph">
-<p>Database init instruction</p>
-</div>
-<div class="paragraph">
-<p><a href="https://github.com/vertigo17/Cerberus/edit/master/source/src/main/resources/documentation/include/en/installation_databaseinit_en.adoc" target="_blank" rel="noopener"><span class="image"><img src="./images/edit-doc.png" alt="FR" width="20" height="20"></span></a> <em>Something is incorrect/missing in this section? Feel free to submit modification.</em></p>
-</div>
 </div>
 <div class="sect2">
-<h3 id="_cerberus_configuration">29.6. Cerberus configuration</h3>
+<h3 id="_upgrade_cerberus_version">29.3. Upgrade Cerberus Version</h3>
+<div class="sect3">
+<h4 id="_manual_upgrade">29.3.1. Manual upgrade</h4>
 <div class="paragraph">
-<p>Installation introduction</p>
+<p>Please refer to INSTALL File in the Cerberus.zip package file.</p>
 </div>
+</div>
+<div class="sect3">
+<h4 id="_docker_upgrade">29.3.2. Docker upgrade</h4>
 <div class="paragraph">
-<p><a href="https://github.com/vertigo17/Cerberus/edit/master/source/src/main/resources/documentation/include/en/installation_configuration_en.adoc" target="_blank" rel="noopener"><span class="image"><img src="./images/edit-doc.png" alt="FR" width="20" height="20"></span></a> <em>Something is incorrect/missing in this section? Feel free to submit modification.</em></p>
+<p><a href="https://github.com/vertigo17/Cerberus/edit/master/source/src/main/resources/documentation/include/en/installation_upgradeversion_en.adoc" target="_blank" rel="noopener"><span class="image"><img src="./images/edit-doc.png" alt="FR" width="20" height="20"></span></a> <em>Something is incorrect/missing in this section? Feel free to submit modification.</em></p>
+</div>
 </div>
 </div>
 </div>
@@ -4612,13 +4549,43 @@ interface description with cloud-based cross-browser testing tools.</p>
 <div class="sect2">
 <h3 id="_selenium">30.1. Selenium</h3>
 <div class="paragraph">
-<p>Installation :
-. Download the Selenium Standalone : <a href="http://selenium-release.storage.googleapis.com/2.53/selenium-server-standalone-2.53.1.jar" class="bare">http://selenium-release.storage.googleapis.com/2.53/selenium-server-standalone-2.53.1.jar</a> (I recommand this version for a stable usage with Cerberus)
-. Download the JSON configuration file for the node that will manage your browsers : <a href="https://github.com/SeleniumHQ/selenium/blob/selenium-2.53.0/java/server/src/org/openqa/grid/common/defaults/DefaultNode.json" class="bare">https://github.com/SeleniumHQ/selenium/blob/selenium-2.53.0/java/server/src/org/openqa/grid/common/defaults/DefaultNode.json</a>
-. Download the package firefox-esr
-. To launch Selenium type these commands :
-.. java -jar (path/to/)selenium-server-standalone-2.53.1.jar -role hub
-.. java -jar (path/to/)selenium-server-standalone-2.53.1.jar -role node -nodeConfig (path/to/)DefaultNode.json</p>
+<p>Installation :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Download Selenium from official website : <a href="https://www.seleniumhq.org/download/" class="bare">https://www.seleniumhq.org/download/</a></p>
+</li>
+<li>
+<p>Start the selenium server :</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>java -jar seleniumjar.jar</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>or</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>java -jar seleniumjar.jar -port 4545</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>To launch Selenium in hub  mode, type these commands :</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>java -jar (path/to/)selenium-server-standalone-2.53.1.jar -role hub
+java -jar (path/to/)selenium-server-standalone-2.53.1.jar -role node -nodeConfig (path/to/)DefaultNode.json</pre>
+</div>
 </div>
 </div>
 <div class="sect2">
@@ -5446,7 +5413,7 @@ bs://fecad32e3d0900192ccc27747d037ead7427b1ba</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_clean_database">33. Clean Database</h2>
+<h2 id="_database_purge">33. Database Purge</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Maintenance Purge Database</p>
@@ -5457,21 +5424,10 @@ bs://fecad32e3d0900192ccc27747d037ead7427b1ba</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_upgrade_cerberus_version">34. Upgrade Cerberus Version</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Maintenance Upgrade Cerberus Version</p>
-</div>
-<div class="paragraph">
-<p><a href="https://github.com/vertigo17/Cerberus/edit/master/source/src/main/resources/documentation/include/en/maintenance_upgradeversion_en.adoc" target="_blank" rel="noopener"><span class="image"><img src="./images/edit-doc.png" alt="FR" width="20" height="20"></span></a> <em>Something is incorrect/missing in this section? Feel free to submit modification.</em></p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_changelog">35. ChangeLog</h2>
+<h2 id="_changelog">34. ChangeLog</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_1_1_13">35.1. 1.1.13</h3>
+<h3 id="_1_1_13">34.1. 1.1.13</h3>
 <div class="paragraph">
 <p><strong>Bug fixes</strong></p>
 </div>
@@ -5615,7 +5571,7 @@ bs://fecad32e3d0900192ccc27747d037ead7427b1ba</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_1_1_14">35.2. 1.1.14</h3>
+<h3 id="_1_1_14">34.2. 1.1.14</h3>
 <div class="paragraph">
 <p><strong>Bug fixes</strong></p>
 </div>
@@ -5699,7 +5655,7 @@ bs://fecad32e3d0900192ccc27747d037ead7427b1ba</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_2_0">35.3. 2.0</h3>
+<h3 id="_2_0">34.3. 2.0</h3>
 <div class="paragraph">
 <p><strong>Improvements / New features</strong></p>
 </div>
@@ -5746,7 +5702,7 @@ bs://fecad32e3d0900192ccc27747d037ead7427b1ba</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_3_0">35.4. 3.0</h3>
+<h3 id="_3_0">34.4. 3.0</h3>
 <div class="paragraph">
 <p><strong>Bug fixes</strong></p>
 </div>
@@ -5857,7 +5813,7 @@ bs://fecad32e3d0900192ccc27747d037ead7427b1ba</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_3_1">35.5. 3.1</h3>
+<h3 id="_3_1">34.5. 3.1</h3>
 <div class="paragraph">
 <p><strong>Bug fixes</strong></p>
 </div>
@@ -5892,7 +5848,7 @@ bs://fecad32e3d0900192ccc27747d037ead7427b1ba</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_3_2">35.6. 3.2</h3>
+<h3 id="_3_2">34.6. 3.2</h3>
 <div class="paragraph">
 <p><strong>Bug fixes</strong></p>
 </div>
@@ -5943,7 +5899,7 @@ bs://fecad32e3d0900192ccc27747d037ead7427b1ba</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_3_3">35.7. 3.3</h3>
+<h3 id="_3_3">34.7. 3.3</h3>
 <div class="paragraph">
 <p><strong>Bug fixes</strong></p>
 </div>
@@ -6030,7 +5986,7 @@ bs://fecad32e3d0900192ccc27747d037ead7427b1ba</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_3_4">35.8. 3.4</h3>
+<h3 id="_3_4">34.8. 3.4</h3>
 <div class="paragraph">
 <p><strong>Bug fixes</strong></p>
 </div>
@@ -6097,7 +6053,7 @@ bs://fecad32e3d0900192ccc27747d037ead7427b1ba</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_3_5">35.9. 3.5</h3>
+<h3 id="_3_5">34.9. 3.5</h3>
 <div class="paragraph">
 <p><strong>Bug fixes</strong></p>
 </div>
@@ -6169,7 +6125,7 @@ bs://fecad32e3d0900192ccc27747d037ead7427b1ba</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_3_6">35.10. 3.6</h3>
+<h3 id="_3_6">34.10. 3.6</h3>
 <div class="paragraph">
 <p><strong>Bug fixes</strong></p>
 </div>
@@ -6207,12 +6163,209 @@ bs://fecad32e3d0900192ccc27747d037ead7427b1ba</p>
 </ul>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_3_7">34.11. 3.7</h3>
+<div class="paragraph">
+<p><strong>Bug fixes</strong></p>
+</div>
+<div class="ulist square">
+<ul class="square">
+<li>
+<p>[GUI] Issue on update and creation of services. #1753</p>
+</li>
+<li>
+<p>[GUI] Issue on adding an application from environment page #1754</p>
+</li>
+<li>
+<p>[GUI] Issues Datalib edit modal from testcasescrpt page</p>
+</li>
+<li>
+<p>[ENGINE] Some error message were not decoded (%ERROR% or %DETAILMESSAGE%)</p>
+</li>
+<li>
+<p>[GUI] 'Save Robot Preference' on RunTest page was disable by mistake.</p>
+</li>
+<li>
+<p>[GUI] Fixed small filter issue on testcaselist page. #1759</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Improvements / New features</strong></p>
+</div>
+<div class="ulist square">
+<ul class="square">
+<li>
+<p>[GUI] Improved documentation structure and removed fr language support (French translation was not uptodate)</p>
+</li>
+<li>
+<p>[ENGINE] New FTP connector for services with GET and PUT command</p>
+</li>
+<li>
+<p>[ENGINE] In case a queue entry has been forced to CANCELLED and corresponding execution is still pending and has retry, it no longuer gets retried.</p>
+</li>
+<li>
+<p>[ENGINE] New dragAndDrop action (using javascript in order to avoid Selenium bug).</p>
+</li>
+<li>
+<p>[GUI] Small improvements on Label Requirement screen.</p>
+</li>
+<li>
+<p>[ENGINE] new parameter 'cerberus_robot_timeout' that allow Cerberus to generate a FA in case the robot (Selenium, Appium or Sikuli) does not answer quick enought.</p>
+</li>
+<li>
+<p>[ENGINE] getFromjson Property also gets the result when JSON is staticly feed on value2.</p>
+</li>
+<li>
+<p>[GUI] prevent special characters to be used on COUNTRY, ENVIRONMENT and SYSTEM invariant.</p>
+</li>
+<li>
+<p>[GUI] prevent . SPACE ( ) and % characters in Property name and Subdata (in order to avoid generating strange and complex variabilisation string)</p>
+</li>
+<li>
+<p>[ENGINE] new system variables : %system.ROBOT% and %system.ROBOTDECLI%. #1779</p>
+</li>
+<li>
+<p>[ENGINE] Robot capabilities are now also decoded. #1780</p>
+</li>
+<li>
+<p>[GUI] DATALIB Bulk rename feature (thanks to @Nouxx). Datalib can not be renamed in consistent mode accros all testcases.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Warning to be considered before applying the version (deprecated features)</strong></p>
+</div>
+<div class="ulist square">
+<ul class="square">
+<li>
+<p>[ENGINE] CIScore is now in integer format. As a consequence, corresponding coef were multiplied by 100 and converted to integer. CI Threshold now default to 100 in stead of 1 and ca be configured with 'cerberus_ci_threshold' parameter.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_3_7_1">34.12. 3.7.1</h3>
+<div class="paragraph">
+<p><strong>Bug fixes</strong></p>
+</div>
+<div class="ulist square">
+<ul class="square">
+<li>
+<p>Docker : Correct bug since java version change on glassfish docker OS</p>
+</li>
+<li>
+<p>Issue on appium using HttpCommandExecutor</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Improvements / New features</strong></p>
+</div>
+<div class="ulist square">
+<ul class="square">
+<li>
+<p>Cerberus now allow service calls without proper SSL Certificate available. new parameter 'cerberus_accept_unsigned_ssl_certificate' allow to tune that behaviour. Default to Y you can put N in order to fail when certificate is not correct.</p>
+</li>
+<li>
+<p>In the datalib modal, we use now a select2 for the service field to be able to search for a specific service.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_3_8">34.13. 3.8</h3>
+<div class="paragraph">
+<p><strong>Bug fixes</strong></p>
+</div>
+<div class="ulist square">
+<ul class="square">
+<li>
+<p>[ENGINE] Bug on Manual execution that sometimes could generate an FA status has been fixed. Happened when manual execution require a Selenium action/control/property.</p>
+</li>
+<li>
+<p>[ENGINE] Fixed Service URL calculation with manualurl parameter set to 1 or 2. #1819</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Improvements / New features</strong></p>
+</div>
+<div class="ulist square">
+<ul class="square">
+<li>
+<p>[ENGINE] ifTextInElement added on the Condition operation list for the test-case-step-action</p>
+</li>
+<li>
+<p>[GUI] Major Label screen improvements. Label screen now display full hierarchy for all types of label (Sticker, Requirement and Battery)</p>
+</li>
+<li>
+<p>[GUI] Label hierarchy is also displayed on ReportByTag page. Corresponding result and execution statistics are agregated by hierarchy.</p>
+</li>
+<li>
+<p>[GUI] On TestCase header modal, the 3 types of labels are now split per type 1 tab for STICKER, another for BATTERY and a last one for REQUIREMENT.</p>
+</li>
+<li>
+<p>[GUI] TestCase mass updates also have label split per type.</p>
+</li>
+<li>
+<p>[ENGINE] Video is now recorded for Android devices &gt;= 4.4 (KitKat).  Just select option Screenshot 3 (Automatic Screenshots on error and Video) or 4 (Systematic Screenshots/Video) to use it.</p>
+</li>
+<li>
+<p>[GUI] On Campaign list screen, view modal now has a statistics TAB that list all past tags with results and statistics.</p>
+</li>
+<li>
+<p>[GUI] On Campaign list screen and ReportByTag Screen, a new action button allow to trigger the execution of the campaign directly from RunTest Page.</p>
+</li>
+<li>
+<p>[GUI] On all list screens (testcase, labels, datalib,&#8230;&#8203;) updating an element on a list no longuer force to come back to the 1st page of the list. #981</p>
+</li>
+<li>
+<p>[GUI] Sticky button on RunTestCase page.</p>
+</li>
+<li>
+<p>[ENGINE] Robot can now have multiple 'executor'. That allow to spread the execution on a given robot to multiple selenium servers (or Appium or Sikuli servers). That allow more parralelism of queued execution and faster campaign executions.</p>
+</li>
+<li>
+<p>[GUI] On Robot modal, the host, port, user and password are to be defined on a new TAB called 'Executor'. Multiple executors can be added to a robot with loadbalancing rule that can be ROUNDROBIN or BYRANKING.</p>
+</li>
+<li>
+<p>[PERF] Performance optimisations on queue management jobs (reducing the nb of SQL).</p>
+</li>
+<li>
+<p>[PERF] TestCase List screen and ReportByTag screens should be faster to navigate on systems that have quite a lot of labels defined.</p>
+</li>
+<li>
+<p>[ENGINE] Capabilities sent to the robot server are now reported from execution page (both requested capabilities at robot level and final capabilities that are decoded and automaticly added by the engine).</p>
+</li>
+<li>
+<p>[GUI] When creating a new TestCase, Test can now be created 'on the fly' without beeing forced to have it created before.</p>
+</li>
+<li>
+<p>[GUI] Added autocomplete on element on some actions/controls/conditions testcase fields.</p>
+</li>
+<li>
+<p>[ENGINE] Added %system.SCREENSIZE% variable. #1852</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Warning to be considered before applying the version (deprecated features)</strong></p>
+</div>
+<div class="ulist square">
+<ul class="square">
+<li>
+<p>SQL 1370 and 1371 can be quite long on systems with lots of executions.</p>
+</li>
+</ul>
+</div>
+</div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2018-06-06 08:03:27 CEST
+Last updated 2018-10-10 21:36:36 CEST
 </div>
 </div>
 </body>

@@ -1128,19 +1128,39 @@ As a consequence the full syntax will look like this :</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">%system.APPLI%</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Application reference</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Application name</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">%system.BROWSER%</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Browser name of the current execution.</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.ROBOT%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Robot name of the current execution.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.ROBOTDECLI%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Robot declination name of the current execution.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.SCREENSIZE%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Robot screensize of the current execution.</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">%system.APP_DOMAIN%</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Domain of the Application</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Domain of the Application (defined at application level)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">%system.APP_HOST%</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Host of the tested Application</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.APP_CONTEXTROOT%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Context Root of the tested Application</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.EXEURL%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Full Url of the tested Application</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">%system.APP_VAR1%</p></td>
@@ -1213,6 +1233,10 @@ As a consequence the full syntax will look like this :</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">%system.TESTCASE%</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">TestCase</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%system.TESTCASEDESCRIPTION%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TestCaseDescription</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">%system.SSIP%</p></td>
@@ -1461,7 +1485,7 @@ Il est possible de tuner les liste des UserAgent et ScreenSize proposés en mode
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2018-04-12 22:42:11 CEST
+Last updated 2018-10-10 21:36:36 CEST
 </div>
 </div>
 </body>
