@@ -17,11 +17,17 @@
 #   Where:
 #       - <release version> is the needed release version
 
-curl -L -o ./Cerberus-${CERBERUS_VERSION}.war https://github.com/cerberustesting/cerberus-source/releases/download/cerberus-testing-${CERBERUS_VERSION}/Cerberus-${CERBERUS_VERSION}.war
-unzip ./Cerberus-${CERBERUS_VERSION}.war tmpdocumentation/*
 
+curl -L -o ./Cerberus-${CERBERUS_VERSION}.war https://github.com/cerberustesting/cerberus-source/releases/download/cerberus-testing-${CERBERUS_VERSION}/Cerberus-${CERBERUS_VERSION}.war
+unzip ./Cerberus-${CERBERUS_VERSION}.war documentation/*
+rm -rf tmpdocumentation
+mv documentation tmpdocumentation
 cp -R tmpdocumentation/* .
+
+rm -rf tmpdocumentation
+rm -rf Cerberus-*.war
 
 git add *
 git commit -a -m 'Update Documentation Cerberus-${CERBERUS_VERSION}'
-git push origin master
+1git push origin master
+
