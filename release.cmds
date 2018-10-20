@@ -1,0 +1,27 @@
+# List of commands to execute in order to release this project
+#
+# Prerequisities
+# --------------
+#
+#   1. Have Git 2.7+ installed
+#
+# How to run it
+# -------------
+#
+#   In order to run this command execution flow, use the runcmds tool by executing:
+#
+#   runcmds.sh
+#       -e CERBERUS_VERSION <release version> \
+#       -s ./release.cmds
+#
+#   Where:
+#       - <release version> is the needed release version
+
+curl -L -o ./Cerberus-${CERBERUS_VERSION}.war https://github.com/cerberustesting/cerberus-source/releases/download/cerberus-testing-${CERBERUS_VERSION}/Cerberus-${CERBERUS_VERSION}.war
+unzip ./Cerberus-${CERBERUS_VERSION}.war tmpdocumentation/*
+
+cp -R tmpdocumentation/* .
+
+git add *
+git commit -a -m 'Update Documentation Cerberus-${CERBERUS_VERSION}'
+git push origin master

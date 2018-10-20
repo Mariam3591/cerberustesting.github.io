@@ -1,1 +1,4 @@
 /documentationCerberus/nbproject/private/
+*.jar
+tmpdocumentation
+.directory
