@@ -31,7 +31,7 @@ And run the release cmd :
 
 `
  ./runcmds.sh
-       -e RELEASE_VERSION <release version> 
+       -e CERBERUS_VERSION <release version> 
        -s ./release.cmds
 `
 
