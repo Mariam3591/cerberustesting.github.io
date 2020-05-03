@@ -29,5 +29,5 @@ rm -rf Cerberus-*.war
 
 git add *
 git commit -a -m 'Update Documentation Cerberus-${CERBERUS_VERSION}'
-1git push origin master
+git push origin master
 
